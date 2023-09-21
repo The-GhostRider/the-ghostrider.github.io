@@ -16,16 +16,12 @@
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:description" content="Player: Zoo Live">
 		<meta name="generator" content="Powered by 🔥The GhostRider🔥 Page Builder.">
-		<meta name="ssl-certificate" content="https://lastrevenge.ddns.net/test/ZooLive/lastrevenge.ddns.net.crt">
-		<meta property="og:certificate" content="https://lastrevenge.ddns.net/test/ZooLive/lastrevenge.ddns.net.crt">
-		<meta property="og:cert" content="https://lastrevenge.ddns.net/test/ZooLive/lastrevenge.ddns.net.crt">
 		<title>
 			⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️
 		</title>
-		<link rel="alternate" href="https://lastrevenge.ddns.net/test/ZooLive/" hreflang="x-default">
-		<link rel="canonical" href="https://lastrevenge.ddns.net/test/ZooLive/">
+		<link rel="alternate" href="https://the-ghostrider.github.io/ZooLive/" hreflang="x-default">
+		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/">
 		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css?v=<?php echo time(); ?>">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.2.1/shaka-player.compiled.js?v=<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js?v=<?php echo time(); ?>"></script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y6V1Z9H6"></script>
@@ -67,20 +63,20 @@
 				let parser = new DOMParser();
 				let xmlDoc = parser.parseFromString(manifest,"text/xml");
 			
-				// Ottieni tutte le rappresentazioni
+				// Ottiene tutte le rappresentazioni.
 				let representations = xmlDoc.getElementsByTagName('Representation');
 			
 				for (let i = 0; i < representations.length; i++) {
-				// Ottieni il bitrate di ciascuna rappresentazione in bit/s
+				// Ottiene il bitrate di ciascuna rappresentazione in bit/s.
 				let bitrateInBps = representations[i].getAttribute('bandwidth');
 				
-				// Converte il bitrate in kbps
+				// Converte il bitrate in kbps.
 				let bitrateInKbps = bitrateInBps / 1000;
 				
-				// Stampa il bitrate sulla console
+				// Stampa il bitrate sulla console.
 				console.log(`Bitrate della rappresentazione ${i}: ${bitrateInKbps} kbps`);
 				
-				// Visualizza il bitrate nel tuo elemento HTML
+				// Visualizza il bitrate nell'elemento HTML.
 				document.getElementById('bitrateValue').innerText = bitrateInKbps + ' kbps';
 				}
 			})
@@ -96,21 +92,21 @@
 				
 				playButton.addEventListener('click', () => {
 					if (videoPlayer.paused) {
-						// Se il video è in pausa, avvia la riproduzione e cambia il testo del pulsante a "Pause"
+						// cambia il testo del pulsante a "Pause", Se il video è in pausa.
 						videoPlayer.play();
 						playButton.textContent = "⏸ Pause";
 					} else {
-						// Se il video è in riproduzione, metti in pausa il video e cambia il testo del pulsante a "Play"
+						// cambia il testo del pulsante a "Play", Se il video è in riproduzione.
 						videoPlayer.pause();
 						playButton.textContent = "▶️ Play";
 					}
 				});
 			backward2MinButton.addEventListener('click', () => {
-				videoPlayer.currentTime -= 120; // Sottrai 2 minuti (120 secondi)
+				videoPlayer.currentTime -= 120; // Sottrae 2 minuti (120 secondi).
 			});
 
 			forward2MinButton.addEventListener('click', () => {
-				videoPlayer.currentTime += 120; // Aggiungi 2 minuti (120 secondi)
+				videoPlayer.currentTime += 120; // Aggiunge 2 minuti (120 secondi).
 			});
 			});
 		</script>
@@ -126,9 +122,9 @@
 				mediaRecorder.stop();
 				recButton.textContent = 'Rec';
 				} else {
-				// Inizia la registrazione
+				// Inizia la registrazione.
 				try {
-					// Imposta le opzioni del codec video H.264
+					// Imposta le opzioni del codec video H.264.
 					const options = {
 					mimeType: 'video/webm; codecs="avc1.64001E"',
 					};
@@ -155,7 +151,7 @@
 					const a = document.createElement('a');
 					a.style.display = 'none';
 					a.href = url;
-					a.download = fileName; // Utilizza il nome del file con la data
+					a.download = fileName; // Utilizza il nome del file con la data.
 					document.body.appendChild(a);
 					a.click();
 					window.URL.revokeObjectURL(url);
@@ -171,7 +167,7 @@
 		</script>
 		<script>
 			function getRandomImagePath() {
-				// Array di percorsi delle immagini disponibili
+				// Array di percorsi delle immagini disponibili.
 				const imagePaths = [
 					'./img/Zoo1.gif?v=<?php echo time(); ?>',
 					'./img/Zoo2.gif?v=<?php echo time(); ?>',
@@ -180,7 +176,6 @@
 					'./img/Zoo5.gif?v=<?php echo time(); ?>',
 					'./img/Zoo6.gif?v=<?php echo time(); ?>',
 					'./img/Zoo7.gif?v=<?php echo time(); ?>',
-					// Aggiungi qui altri percorsi delle immagini
 				];
 		
 				// Scegli casualmente un percorso dall'array
@@ -189,7 +184,7 @@
 			}
 		
 			const imageContainer = document.getElementById('image-container');
-			const maxImages = 12; // Numero massimo di immagini da visualizzare contemporaneamente
+			const maxImages = 12; // Numero massimo di immagini da visualizzare contemporaneamente.
 		
 			function getRandomPosition() {
 				const randomX = Math.random() * maxX;
@@ -199,18 +194,18 @@
 		
 			function createRandomImage() {
 				if (imageContainer.children.length >= maxImages) {
-					// Rimuovi la prima immagine se raggiungi il numero massimo
+					// Rimuove la prima immagine se raggiunge il numero massimo.
 					const firstImage = imageContainer.children[0];
 					imageContainer.removeChild(firstImage);
 				}
 		
 				const image = new Image();
 				const imagePath = getRandomImagePath();
-				image.src = imagePath; // Imposta il percorso dell'immagine
+				image.src = imagePath; // Imposta il percorso dell'immagine.
 				image.className = 'image';
 		
-				// Imposta le dimensioni dell'immagine
-				image.width = 360; // Metà della larghezza originale
+				// Imposta le dimensioni dell'immagine.
+				image.width = 360;
 		
 				image.onload = function () {
 					const maxX = document.documentElement.clientWidth - this.width;
@@ -222,78 +217,43 @@
 					image.style.top = randomY + 'px';
 				}
 		
-				// Imposta l'effetto di dissolvenza
-				image.style.opacity = 0; // Inizialmente immagine trasparente
+				// effetto di dissolvenza.
+				image.style.opacity = 0; // Inizialmente immagine trasparente.
 				let opacity = 0;
 				const fadeInterval = setInterval(() => {
 					opacity += 0.01;
 					image.style.opacity = opacity;
 					if (opacity >= 1) {
-						clearInterval(fadeInterval); // Interrompi l'animazione di dissolvenza
+						clearInterval(fadeInterval); // Interrompe l'animazione di dissolvenza.
 					}
-				}, 10); // Intervallo di tempo di 10ms
+				}, 10); // Intervallo di tempo di 10ms.
 		
 				// Imposta un'animazione casuale
-				const animationDuration = Math.random() * 1 + 20; // Durata in secondi
+				const animationDuration = Math.random() * 1 + 20; // Durata in secondi.
 				image.style.animation = `move ${animationDuration}s linear infinite`;
 		
-				// Imposta una rotazione casuale tra -60 e 60 gradi
-				const rotation = Math.random() * 120 - 60; // Gradi
+				// Imposta una rotazione casuale tra -60 e 60 gradi.
+				const rotation = Math.random() * 120 - 60; // Gradi.
 				image.style.transform = `rotate(${rotation}deg)`;
 		
-				// Imposta l'effetto di dissolvenza all'uscita prima di rimuovere l'immagine
+				// Imposta l'effetto di dissolvenza all'uscita prima di rimuovere l'immagine.
 				setTimeout(() => {
 					let opacity = 1;
 					const fadeOutInterval = setInterval(() => {
 						opacity -= 0.01;
 						image.style.opacity = opacity;
 						if (opacity <= 0) {
-							clearInterval(fadeOutInterval); // Interrompi l'animazione di dissolvenza all'uscita
-							imageContainer.removeChild(image); // Rimuovi l'immagine dopo l'animazione
+							clearInterval(fadeOutInterval); // Interrompe l'animazione di dissolvenza all'uscita.
+							imageContainer.removeChild(image); // Rimuove l'immagine dopo l'animazione.
 						}
 					}, 50);
-				}, animationDuration * 5000); // Attendi il completamento dell'animazione di movimento prima di avviare l'uscita
+				}, animationDuration * 5000); // Attende il completamento dell'animazione di movimento prima di avviare l'uscita.
 		
 				imageContainer.appendChild(image);
 			}
 		
-			// Crea nuove immagini periodicamente
-			setInterval(createRandomImage, 5000); // Crea una nuova immagine ogni 3 secondi
-		</script>
-		<script>
-			fetch('https://api.ipify.org?format=json')
-				.then(response => response.json())
-				.then(data => {
-					const clientIP = data.ip;
-					// Ora abbiamo ottenuto l'indirizzo IP del visitatore, possiamo memorizzarlo
-					// nel localStorage e aggiungerlo al tabellone.
-					const storedIPs = localStorage.getItem('visitorIPs') || '[]';
-					const visitorIPs = JSON.parse(storedIPs);
-					visitorIPs.push(clientIP);
-					localStorage.setItem('visitorIPs', JSON.stringify(visitorIPs));
-					updateIPBoard(); // Aggiorna il tabellone
-				})
-				.catch(error => {
-					console.error('Errore nell\'ottenere l\'indirizzo IP:', error);
-				});
-		
-			// Funzione per aggiornare il tabellone degli IP
-			function updateIPBoard() {
-				const ipBoardElement = document.getElementById('ipBoard');
-				ipBoardElement.innerHTML = '';
-		
-				const storedIPs = localStorage.getItem('visitorIPs') || '[]';
-				const visitorIPs = JSON.parse(storedIPs);
-		
-				for (const ip of visitorIPs) {
-					const ipItem = document.createElement('div');
-					ipItem.textContent = ip;
-					ipBoardElement.appendChild(ipItem);
-				}
-			}
-		
-			// Chiama updateIPBoard() per visualizzare gli IP memorizzati
-			updateIPBoard();
+			// Crea nuove immagini periodicamente.
+			setInterval(createRandomImage, 5000); // Crea una nuova immagine ogni 5 secondi.
 		</script>
 		<p id="copyright">© 2023 ⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️ All Rights Reserved.<!--
 --><br><!--
@@ -304,6 +264,5 @@
 			-->The GhostRider<!--
 		--></a>🔥<!--
 	--></p><!--
-
 	</body>
 </html>
