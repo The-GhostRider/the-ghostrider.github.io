@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Player: Zoo Live</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta property="og:type" content="website">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:url" content="https://lastrevenge.ddns.net/test/ZooLive/">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta property="og:title" content="⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️">
+		<meta name="description" content="Player: Zoo Live">
+		<meta property="og:image" content="./img/LogoZoo105.png?v=<?php echo time(); ?>">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:description" content="Player: Zoo Live">
+		<meta name="generator" content="Powered by 🔥The GhostRider🔥 Page Builder.">
+		<meta name="ssl-certificate" content="https://lastrevenge.ddns.net/test/ZooLive/lastrevenge.ddns.net.crt">
+		<meta property="og:certificate" content="https://lastrevenge.ddns.net/test/ZooLive/lastrevenge.ddns.net.crt">
+		<meta property="og:cert" content="https://lastrevenge.ddns.net/test/ZooLive/lastrevenge.ddns.net.crt">
+		<title>
+			⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️
+		</title>
+		<link rel="alternate" href="https://lastrevenge.ddns.net/test/ZooLive/" hreflang="x-default">
+		<link rel="canonical" href="https://lastrevenge.ddns.net/test/ZooLive/">
+		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css?v=<?php echo time(); ?>">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.2.1/shaka-player.compiled.js?v=<?php echo time(); ?>"></script>
+		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js?v=<?php echo time(); ?>"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y6V1Z9H6"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'G-87Y6V1Z9H6');
+		</script>
+	</head>
+	<body>
+		<div class="LogoCont">
+			<img id="Logo105" src="./img/LogoZoo105.png?v=<?php echo time(); ?>" alt="LogoZoo105"></img>
+		</div>
+		<div id="image-container">
+			<image id="ZooGifs" src="./img/Zoo1.gif?v=<?php echo time(); ?>" alt="ZooGifs"></image>
+		</div>
+		<div id="Global">
+			<div id="video-wrapper">
+				<div id="bitrateClock">Bitrate: <span id="bitrateValue">0 kbps</span></div>
+				<video id="mediaset-player" controls>
+					<source src="https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd" type="application/dash+xml"/>
+				</video>
+			</div>
+			<div id="time-controls">
+				<button id="backward-2-min">↩️ -2 min</button>
+				<button id="forward-2-min">↪️ +2 min</button>
+			</div>
+			<div id="controls">
+				<button id="playButton">▶️ Play</button>
+				<button id="recButton">🔴 Rec</button>
+			</div>
+		</div>
+		<script>
+			fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
+			.then(response => response.text())
+			.then(manifest => {
+				let parser = new DOMParser();
+				let xmlDoc = parser.parseFromString(manifest,"text/xml");
+			
+				// Ottieni tutte le rappresentazioni
+				let representations = xmlDoc.getElementsByTagName('Representation');
+			
+				for (let i = 0; i < representations.length; i++) {
+				// Ottieni il bitrate di ciascuna rappresentazione in bit/s
+				let bitrateInBps = representations[i].getAttribute('bandwidth');
+				
+				// Converte il bitrate in kbps
+				let bitrateInKbps = bitrateInBps / 1000;
+				
+				// Stampa il bitrate sulla console
+				console.log(`Bitrate della rappresentazione ${i}: ${bitrateInKbps} kbps`);
+				
+				// Visualizza il bitrate nel tuo elemento HTML
+				document.getElementById('bitrateValue').innerText = bitrateInKbps + ' kbps';
+				}
+			})
+			.catch(error => console.error('Errore durante il caricamento del manifest.mpd:', error));
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', (event) => {
+				const videoPlayer = document.getElementById('mediaset-player');
+				const backward2MinButton = document.getElementById('backward-2-min');
+				const forward2MinButton = document.getElementById('forward-2-min');
+				const videoSource = document.querySelector('source');
+				const playButton = document.getElementById('playButton');
+				
+				playButton.addEventListener('click', () => {
+					if (videoPlayer.paused) {
+						// Se il video è in pausa, avvia la riproduzione e cambia il testo del pulsante a "Pause"
+						videoPlayer.play();
+						playButton.textContent = "⏸ Pause";
+					} else {
+						// Se il video è in riproduzione, metti in pausa il video e cambia il testo del pulsante a "Play"
+						videoPlayer.pause();
+						playButton.textContent = "▶️ Play";
+					}
+				});
+			backward2MinButton.addEventListener('click', () => {
+				videoPlayer.currentTime -= 120; // Sottrai 2 minuti (120 secondi)
+			});
+
+			forward2MinButton.addEventListener('click', () => {
+				videoPlayer.currentTime += 120; // Aggiungi 2 minuti (120 secondi)
+			});
+			});
+		</script>
+		<script>
+			const videoPlayer = document.getElementById('mediaset-player');
+			const recButton = document.getElementById('recButton');
+			let mediaRecorder;
+			let recordedChunks = [];
+			
+			recButton.addEventListener('click', () => {
+				if (mediaRecorder && mediaRecorder.state === 'recording') {
+				// Ferma la registrazione se è già in corso
+				mediaRecorder.stop();
+				recButton.textContent = 'Rec';
+				} else {
+				// Inizia la registrazione
+				try {
+					// Imposta le opzioni del codec video H.264
+					const options = {
+					mimeType: 'video/webm; codecs="avc1.64001E"',
+					};
+					mediaRecorder = new MediaRecorder(videoPlayer.captureStream(), options);
+				} catch (e) {
+					console.error('Impossibile registrare: ' + e);
+					return;
+				}
+			
+				const today = new Date();
+				const formattedDate = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
+				const fileName = `Zoo_${formattedDate}.mp4`;
+			
+				mediaRecorder.ondataavailable = (event) => {
+					if (event.data.size > 0) {
+					recordedChunks.push(event.data);
+					}
+				};
+			
+				mediaRecorder.onstop = () => {
+					const blob = new Blob(recordedChunks, { type: 'video/mp4; codecs="avc1.64001E"' });
+					const url = URL.createObjectURL(blob);
+			
+					const a = document.createElement('a');
+					a.style.display = 'none';
+					a.href = url;
+					a.download = fileName; // Utilizza il nome del file con la data
+					document.body.appendChild(a);
+					a.click();
+					window.URL.revokeObjectURL(url);
+			
+					recordedChunks = [];
+					recButton.textContent = '🔴 Rec';
+				};
+			
+				mediaRecorder.start();
+				recButton.textContent = '⏹ Stop';
+				}
+			});
+		</script>
+		<script>
+			function getRandomImagePath() {
+				// Array di percorsi delle immagini disponibili
+				const imagePaths = [
+					'./img/Zoo1.gif?v=<?php echo time(); ?>',
+					'./img/Zoo2.gif?v=<?php echo time(); ?>',
+					'./img/Zoo3.gif?v=<?php echo time(); ?>',
+					'./img/Zoo4.gif?v=<?php echo time(); ?>',
+					'./img/Zoo5.gif?v=<?php echo time(); ?>',
+					'./img/Zoo6.gif?v=<?php echo time(); ?>',
+					'./img/Zoo7.gif?v=<?php echo time(); ?>',
+					// Aggiungi qui altri percorsi delle immagini
+				];
+		
+				// Scegli casualmente un percorso dall'array
+				const randomIndex = Math.floor(Math.random() * imagePaths.length);
+				return imagePaths[randomIndex];
+			}
+		
+			const imageContainer = document.getElementById('image-container');
+			const maxImages = 12; // Numero massimo di immagini da visualizzare contemporaneamente
+		
+			function getRandomPosition() {
+				const randomX = Math.random() * maxX;
+				const randomY = Math.random() * maxY;
+				return { x: randomX, y: randomY };
+			}
+		
+			function createRandomImage() {
+				if (imageContainer.children.length >= maxImages) {
+					// Rimuovi la prima immagine se raggiungi il numero massimo
+					const firstImage = imageContainer.children[0];
+					imageContainer.removeChild(firstImage);
+				}
+		
+				const image = new Image();
+				const imagePath = getRandomImagePath();
+				image.src = imagePath; // Imposta il percorso dell'immagine
+				image.className = 'image';
+		
+				// Imposta le dimensioni dell'immagine
+				image.width = 360; // Metà della larghezza originale
+		
+				image.onload = function () {
+					const maxX = document.documentElement.clientWidth - this.width;
+					const maxY = document.documentElement.clientHeight - this.height;
+					const randomX = Math.random() * maxX;
+					const randomY = Math.random() * maxY;
+		
+					image.style.left = randomX + 'px';
+					image.style.top = randomY + 'px';
+				}
+		
+				// Imposta l'effetto di dissolvenza
+				image.style.opacity = 0; // Inizialmente immagine trasparente
+				let opacity = 0;
+				const fadeInterval = setInterval(() => {
+					opacity += 0.01;
+					image.style.opacity = opacity;
+					if (opacity >= 1) {
+						clearInterval(fadeInterval); // Interrompi l'animazione di dissolvenza
+					}
+				}, 10); // Intervallo di tempo di 10ms
+		
+				// Imposta un'animazione casuale
+				const animationDuration = Math.random() * 1 + 20; // Durata in secondi
+				image.style.animation = `move ${animationDuration}s linear infinite`;
+		
+				// Imposta una rotazione casuale tra -60 e 60 gradi
+				const rotation = Math.random() * 120 - 60; // Gradi
+				image.style.transform = `rotate(${rotation}deg)`;
+		
+				// Imposta l'effetto di dissolvenza all'uscita prima di rimuovere l'immagine
+				setTimeout(() => {
+					let opacity = 1;
+					const fadeOutInterval = setInterval(() => {
+						opacity -= 0.01;
+						image.style.opacity = opacity;
+						if (opacity <= 0) {
+							clearInterval(fadeOutInterval); // Interrompi l'animazione di dissolvenza all'uscita
+							imageContainer.removeChild(image); // Rimuovi l'immagine dopo l'animazione
+						}
+					}, 50);
+				}, animationDuration * 5000); // Attendi il completamento dell'animazione di movimento prima di avviare l'uscita
+		
+				imageContainer.appendChild(image);
+			}
+		
+			// Crea nuove immagini periodicamente
+			setInterval(createRandomImage, 5000); // Crea una nuova immagine ogni 3 secondi
+		</script>
+		<script>
+			fetch('https://api.ipify.org?format=json')
+				.then(response => response.json())
+				.then(data => {
+					const clientIP = data.ip;
+					// Ora abbiamo ottenuto l'indirizzo IP del visitatore, possiamo memorizzarlo
+					// nel localStorage e aggiungerlo al tabellone.
+					const storedIPs = localStorage.getItem('visitorIPs') || '[]';
+					const visitorIPs = JSON.parse(storedIPs);
+					visitorIPs.push(clientIP);
+					localStorage.setItem('visitorIPs', JSON.stringify(visitorIPs));
+					updateIPBoard(); // Aggiorna il tabellone
+				})
+				.catch(error => {
+					console.error('Errore nell\'ottenere l\'indirizzo IP:', error);
+				});
+		
+			// Funzione per aggiornare il tabellone degli IP
+			function updateIPBoard() {
+				const ipBoardElement = document.getElementById('ipBoard');
+				ipBoardElement.innerHTML = '';
+		
+				const storedIPs = localStorage.getItem('visitorIPs') || '[]';
+				const visitorIPs = JSON.parse(storedIPs);
+		
+				for (const ip of visitorIPs) {
+					const ipItem = document.createElement('div');
+					ipItem.textContent = ip;
+					ipBoardElement.appendChild(ipItem);
+				}
+			}
+		
+			// Chiama updateIPBoard() per visualizzare gli IP memorizzati
+			updateIPBoard();
+		</script>
+		<p id="copyright">© 2023 ⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️ All Rights Reserved.<!--
+--><br><!--
+		--><a class="fire-text" href="mailto:il.ghost.rider8@gmail.com" target="_blank"><!--
+			-->il.ghost.rider8@gmail.com<!--
+		--></a> Powered by 🔥<!--
+		--><a class="fire-text" href="https://github.com/The-GhostRider" target="_blank"><!--
+			-->The GhostRider<!--
+		--></a>🔥<!--
+	--></p><!--
+
+	</body>
+</html>
