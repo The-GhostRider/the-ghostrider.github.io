@@ -370,6 +370,7 @@
 		align-content: center;
 		align-items: center;
 		justify-content: center;
+		visibility: hidden;
 		z-index: 3;
 	}
 
@@ -551,6 +552,7 @@
 		position: absolute;
 		opacity: 0;
 		transition: opacity 1s, transform 1s, box-shadow 1s;
+		visibility: hidden;
 		z-index: 1;
 	}
 	
@@ -572,22 +574,22 @@
 	}
 	
 	#geoInfo_3 {
-		margin-top: 1%;
-		margin-left: 14.3%;
+		margin-top: -0.9%;
+		margin-left: 12.6%;
 		width: auto;
 		height: auto;
-		scale: 173%;
+		scale: 160%;
 		position: absolute;
 		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
 	}
 	
 	#geoInfo_4 {
-		margin-top: -8%;
+		margin-top: -10%;
 		margin-left: 71%;
 		width: auto;
 		height: auto;
-		scale: 105%;
+		scale: 111%;
 		position: absolute;
 		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
