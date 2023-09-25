@@ -1,0 +1,117 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:: Inizializza il colore
+for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do set ESC=%%b
+echo ###############################################
+echo #%ESC%[31m Convertitore Sviluppato da:%ESC%[0m %ESC%[36mThe GhostRider %ESC%[0m #
+echo ###############################################
+echo.
+echo %ESC%[36m Ricerca del Convertitore VLC 32-Bit o 64-Bit nelle sue Directory di Default... %ESC%[0m
+echo.
+timeout /t 3 >nul
+
+:: Inizializza la variabile vlc_found a false
+set vlc_found=false
+
+:: Prova a trovare vlc.exe nel percorso "Program Files"
+if exist "C:\Program Files\VideoLAN\VLC\vlc.exe" (
+    set vlc_path="C:\Program Files\VideoLAN\VLC\vlc.exe"
+	echo %ESC%[36m Ho trovato VLC nei suoi percorsi di Default. %ESC%[0m
+	echo.
+	timeout /t 2 >nul
+	echo %ESC%[32m Versione VLC 64-Bit %ESC%[0m
+	echo.
+	timeout /t 3 >nul
+    echo %ESC%[36m Inizio la Conversione in MP4... %ESC%[0m
+	echo.
+	timeout /t 2 >nul
+
+    :: Imposta vlc_found a true perché VLC è stato trovato
+    set vlc_found=true
+) else (
+    :: Se non lo trova, prova a cercarlo nel percorso "Program Files (x86)"
+    if exist "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe" (
+        set vlc_path="C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
+		echo %ESC%[36m Ho trovato VLC nei suoi percorsi di Default. %ESC%[0m
+		echo.
+		timeout /t 2 >nul
+		echo %ESC%[32m Versione VLC 32-Bit %ESC%[0m
+		echo.
+		timeout /t 3 >nul
+        echo %ESC%[36m Inizio la Conversione in MP4... %ESC%[0m
+		echo.
+		timeout /t 2 >nul
+
+		:: Imposta vlc_found a true perché VLC è stato trovato
+		set vlc_found=true
+    ) else (
+        :: Se non lo trova nemmeno qui, esegue una ricerca dinamica del percorso di VLC su tutti gli Hard Disk presenti nel PC
+		echo %ESC%[33m Non ho trovato VLC nei suoi percorsi di Default, Sto cercando il percorso di VLC... %ESC%[0m
+		echo.
+        for %%d in (C: D: E: F:) do (
+            for /f "delims=" %%a in ('dir /s /b "%%d\vlc.exe" 2^>nul') do (
+				echo %ESC%[32m Ho trovato VLC, Inizio la Conversione in MP4... %ESC%[0m
+				timeout /t 3 >nul
+				echo.
+                set vlc_path="%%a"
+				
+				:: Imposta vlc_found a true perché VLC è stato trovato
+				set vlc_found=true
+				
+                goto found
+            )
+        )
+    )
+)
+
+:: Se VLC non è stato trovato, mostra un messaggio di errore e termina lo script
+if "%vlc_found%"=="false" (
+    echo %ESC%[31m Il percorso di VLC non è stato trovato, non è possibile effettuare la conversione del video. %ESC%[0m
+    echo.
+    pause
+    exit /b
+)
+
+:found
+set input_file="%~1"
+
+:: Crea una cartella "Output" se non esiste
+if not exist Output mkdir Output
+
+:: Imposta il percorso del file di output nella cartella "Output"
+set output_file="Output\%~n1.mp4"
+echo.
+
+:: Ottiene l'ora di inizio della conversione
+set start_time=%time%
+echo %ESC%[32m Start Time: %start_time:~0,8% %ESC%[0m
+
+echo %ESC%[36m CONVERSIONE: 0%% %ESC%[0m
+
+%vlc_path% -I dummy %input_file% --sout=#transcode{vcodec=h264,acodec=mp4a,width=1920,height=1080}:std{access=file,mux=mp4,dst=%output_file%} vlc://quit
+
+:: Ottiene l'ora di fine della conversione
+set end_time=%time%
+echo.
+echo %ESC%[36m CONVERSIONE: # 10%% %ESC%[0m
+timeout /t 2 >nul
+echo.
+echo %ESC%[36m CONVERSIONE: ##### 50%% %ESC%[0m
+timeout /t 2 >nul
+echo.
+echo %ESC%[36m CONVERSIONE: ########## 100%% %ESC%[0m
+timeout /t 1 >nul
+echo.
+echo %ESC%[32m End Time: %end_time:~0,8% %ESC%[0m
+:: Calcola la durata della conversione in secondi
+for /f "tokens=1-4 delims=:.," %%a in ("%end_time%") do (
+    set /a "end_seconds=((1%%a-100)*3600+(1%%b-100)*60+(1%%c-100))"
+)
+for /f "tokens=1-4 delims=:.," %%a in ("%start_time%") do (
+    set /a "start_seconds=((1%%a-100)*3600+(1%%b-100)*60+(1%%c-100))"
+)
+set /a duration=end_seconds-start_seconds
+echo %ESC%[36m Conversione completata. Il file convertito si trova nella cartella "Output". %ESC%[0m
+echo %ESC%[32m La conversione ha richiesto %duration% secondi. %ESC%[0m
+pause

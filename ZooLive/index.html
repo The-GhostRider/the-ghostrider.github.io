@@ -7,12 +7,13 @@
 		<meta property="og:type" content="website">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="og:url" content="https://the-ghostrider.github.io/ZooLive/">
+		<meta property="og:url" content="https://the-ghostrider.github.io/ZooLive/index.html">
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 		<meta http-equiv="Pragma" content="no-cache">
 		<meta http-equiv="Expires" content="0">
 		<meta property="og:title" content="⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️">
 		<meta name="description" content="Player: Zoo Live">
-		<meta property="og:image" content="./img/LogoZoo105.png?v=<?php echo time(); ?>">
+		<meta property="og:image" content="./img/ZooManifest.png?v=<?php echo time(); ?>">
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:description" content="Player: Zoo Live">
 		<meta name="generator" content="Powered by 🔥The GhostRider🔥 Page Builder.">
@@ -21,20 +22,227 @@
 		</title>
 		<link rel="icon" href="./img/favicon.ico" />
 		<link rel="alternate" href="https://the-ghostrider.github.io/ZooLive/" hreflang="x-default">
+		<link rel="alternate" href="https://the-ghostrider.github.io/ZooLive/index.html" hreflang="x-default">
 		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/">
+		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/index.html">
 		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css?v=<?php echo time(); ?>">
 		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js?v=<?php echo time(); ?>"></script>
+		<script>
+			const ua = encodeURIComponent(navigator.userAgent).replace(/%20/g,'+');
+			const xhr = new XMLHttpRequest();
+				xhr.open('GET', 'https://livetrafficfeed.com/static/v2/user-agent?ua=USERAGENT&key=dou5hdkJiiiSRvQ9R5UklsbvR4JAEYER', false);
+				xhr.send();
+			if (xhr.status == 200) {
+			const result = JSON.parse(xhr.responseText);
+			console.log(result);
+		}
+		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y6V1Z9H6"></script>
 		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-87Y6V1Z9H6');
+		</script>
+		<script>
+			function getSupportedMimeTypes(media, types, codecs) {
+			const isSupported = MediaRecorder.isTypeSupported;
+			const supported = [];
+			types.forEach((type) => {
+				const mimeType = `${media}/${type}`;
+				codecs.forEach((codec) => [
+					`${mimeType};codecs=${codec}`,
+					`${mimeType};codecs=${codec.toUpperCase()}`,
+					// /!\ false positive /!\
+					// `${mimeType};codecs:${codec}`,
+					// `${mimeType};codecs:${codec.toUpperCase()}` 
+				].forEach(variation => {
+					if(isSupported(variation)) 
+						supported.push(variation);
+				}));
+				if (isSupported(mimeType))
+				supported.push(mimeType);
+			});
+			return supported;
+			};
+			
+			// Usage ------------------
+			
+			const videoTypes = ["webm", "ogg", "mp4", "x-matroska"];
+			const audioTypes = ["webm", "ogg", "mp3", "x-matroska"];
+			const codecs = ["should-not-be-supported","vp9", "vp9.0", "vp8", "vp8.0", "avc1", "av1", "h265", "h.265", "h264", "h.264", "opus", "pcm", "aac", "mpeg", "mp4a"];
+			
+			const supportedVideos = getSupportedMimeTypes("video", videoTypes, codecs);
+			const supportedAudios = getSupportedMimeTypes("audio", audioTypes, codecs);
+			
+			console.log('-- Top supported Video : ', supportedVideos[0])
+			console.log('-- Top supported Audio : ', supportedAudios[0])
+			console.log('-- All supported Videos : ', supportedVideos)
+			console.log('-- All supported Audios : ', supportedAudios)
+		</script>
+		<script>
+			function addFadeEffect(selector) {
+				const elements = document.querySelectorAll(selector);
+
+				elements.forEach((element) => {
+					let opacity = 0;
+					let scale = 0.1;
+					let interval;
+					const elementContent = element.nextElementSibling; // Ottiene il contenuto del Tip o dello Spoiler
+
+					element.addEventListener("mouseenter", function () {
+						clearInterval(interval);
+						elementContent.style.display = "block";
+						fadeIn();
+					});
+
+					element.addEventListener("mouseleave", function () {
+						clearInterval(interval);
+						fadeOut();
+					});
+
+					function fadeIn() {
+						interval = setInterval(function () {
+							opacity += 0.1;
+							scale += 0.1; // Aumenta la scala durante il fadeIn
+							elementContent.style.opacity = opacity;
+							elementContent.style.transform = `scale(${scale}) translate(-50%, -10%)`;
+							if (opacity >= 1) {
+								clearInterval(interval);
+							}
+						}, 10); // Regola la velocità della dissolvenza in base alle tue preferenze
+					}
+
+					function fadeOut() {
+						interval = setInterval(function () {
+							opacity -= 0.1;
+							scale -= 0.1; // Riduce la scala durante il fadeOut
+							elementContent.style.opacity = opacity;
+							elementContent.style.transform = `scale(${scale}) translate(50%, -50%)`;
+							if (opacity <= 0) {
+								clearInterval(interval);
+								elementContent.style.display = "none";
+							}
+						}, 40); // Regola la velocità della dissolvenza in base alle tue preferenze
+					}
+				});
+			}
+
+			document.addEventListener("DOMContentLoaded", function () {
+				addFadeEffect(`.tip-icon`);
+			});
+		</script>
+		<script>
+			// Funzione per chiudere tutti gli spoiler
+			function closeAllSpoilers() {
+				const spoilerContents = document.querySelectorAll('.spoiler-content');
+				spoilerContents.forEach((spoilerContent) => {
+					spoilerContent.style.display = 'none';
+				});
+			}
+			
+				// Funzione per aprire o chiudere lo spoiler
+				function toggleSpoiler(element) {
+					const spoilerContent = element.querySelector('.spoiler-content');
+					if (spoilerContent.style.display === 'block') {
+						spoilerContent.classList.add('fadeOut');
+						setTimeout(function() {
+							spoilerContent.style.display = 'none';
+							spoilerContent.classList.remove('fadeOut');
+						}, 1500);
+					} else {
+						closeAllSpoilers(); // Chiude tutti gli spoiler prima di aprirne uno
+						spoilerContent.style.display = 'block';
+						spoilerContent.classList.add('fadeIn');
+						setTimeout(function() {
+							spoilerContent.classList.remove('fadeIn');
+						}, 1500);
+					}
+				}
+			
+				// Aggiunge event listener per il click su spoiler
+				const spoilers = document.querySelectorAll('.spoilers-container > .spoiler');
+				spoilers.forEach((spoiler) => {
+					spoiler.addEventListener('click', () => {
+						toggleSpoiler(spoiler);
+					});
+				});
+		</script>
+		<script>
+			window.addEventListener('load', function() {
+			console.log("La funzione load è stata chiamata.");
+				const tipIcon = document.querySelectorAll(`#Tip`);
+				const iconContentData = [
+				{ iconId: `#Tip` }
+				];
+				
+				iconContentData.forEach(data => {
+				const icon = document.getElementById(data.iconId);
+				const content = document.querySelector(data.contentClass);
+				
+				if (icon && content) {
+					const tipIconRect = icon.getBoundingClientRect();
+					const tipTop = tipIconRect.top + tipIconRect.height * 0.31;
+					const tipLeft = tipIconRect.left + tipIconRect.width * 0.39;
+					
+					content.style.top = tipTop + 'px';
+					content.style.left = tipLeft + 'px';
+					content.style.display = 'none';
+				}
+			});
 		
-		gtag('config', 'G-87Y6V1Z9H6');
+			});
 		</script>
 	</head>
 	<body>
+		<div id="Zoo_Radio">
+			<a href="javascript:"><img id="Zoo_Radio_IMG" alt="Zoo Radio" title="Zoo Radio" data-original="https://zoo.105.net/resizer/380/380/true/Webradio-105-zoo-1632236075367.png--.png?1632236075450" width="180" height="180" src="https://zoo.105.net/resizer/380/380/true/Webradio-105-zoo-1632236075367.png--.png?1632236075450" style="display: inline;">
+			<audio controls id="Zoo_Radio_Audio">
+				<source src="https://icy.unitedradio.it/105Zoo.mp3?aw_0_req.userConsentV2=CPq-6wAPq-6wAB7EqBITDCCsAP_AAAAAAAAAJaNd_H__bX9r-f5_6ft0eY1f9_r77uQzDhfNk-4F3L_W_LwX_2E7NF36tq4KmR4ku3LBIUNlHNHUTVmwaokVrzHsak2cpTNKJ6BEkHMZe2dYGF5vmxtj-QKY5_5_d3f52T-9_dv-39z3391Xv3d5_-_1-PDdU5_9Dfn9fR_b-9KP9_78v8v8_9_rk2_eX_3____7_H_-f__BKOASADgAJYBnwEeAMEAdsA7kCRAEowCQkGAABAAC4AKAAqABkADkAHgAgABgADKAGgAagA8gCGAIoATAAngBVADeAHMAPQAfgBCQCGAIkARwAlgBNAClAFuAMMAZAAywBsgDvgHsAfEA-wD9gH-AgYBFICLgIxARoBHACTAEpgJ-AoIBTwCrgFzAMUAaIA1gBtADcAHEAPkAh0BHoCRAEygJ2AUOApEBTQCxQFoALYAXIAu8BeYDBgGGwMjAyQBk4DLgGcgM-AaMA0iBrAGsgNvAbqA4KByYHKAOXAeOA9oCDAEIYIXAheBDkCHoEPwIhgRSAj6BH8CRQEkIJMAkyBJsCWAEsw0CEALgAhgBkADLAGzAPsA_ACAAEFAIwASYAp4BV4C0ALSAawA6oB8gEOgImARUAkQBOwCkQFyAMjAZOAzkBngDPgHKAQYAj-BIoCWYiA2AIYAZAAywBswD7APwAgABGACTAFPAKuAawA6oB8gEOgJEATsApEBcgDIwGTgM5AZ8A5QCDAEfwJFASzFQFgAKABDACYAFwARwAywCOAFXgLQAtICPQFsALkAXmAyMBnIDPAGfANyAcoBC8CP4EihkBUAIYATABHADLAI4AVcArYCPQEnALRAWwAuQBeYDIwGcgM8AZ8A5QCF4EfwJFDoOwAC4AKAAqABkADkAHwAgABdADAAMoAaABqADwAH0AQwBFACYAE8AKsAXABdADEAGYAN4AcwA9AB-gEMARIAlgBNACjAFKALEAW8AwgDDgGQAZQA0QBsgDvAHtAPsA_QB_gEDAIpARYBGICOAI6ASYAlMBPwFBAKeAVcAsUBaAFpALnAXkBegDFAG0ANwAcQA5wB1AD7AIdARUAi8BHoCRAEqAJkATsAocBTQCrAFigLKAWwAuABcgC7QF3gLzAX0AwYBhoDHoGRgZIAycBlQDLAGXAMzAZyAz4BogDRgGkANVAawA28BuoDi4HJgcoA5cB44D2gH1gQBAgwBBoCF8EOQQ6Ah6BFICOwEfQI_gSKAkgBJkCTYEqAJVgSwglmCWhCCKAAsACgAGQAXAAxABqAEMAJgAUwAqgBcADEAGYAN4AegBHAClAFiAMIAZQA7wB9gD_AIoARwAlIBQQCngFXgLQAtIBcwDFAG0AOcAdQBHoCRAEnAJUAU0AqwBYoCygFogLYAXAAuQBdoDIwGTgM5AZ4Az4BogDVQHAAOUAeOBBgCFAELwIdAQ9Aj6BH8CRQEkAJMgS0JQQwAEAALAAoABkADgAH4AYABiADwAIgATAAqgBcADEAGaAQwBEgCOAFGAKUAW4AwgBlADZAHfAPsA_ACOAFPAKvAWgBaQC5gGKANwAdQA-QB9gEOgImARUAi8BHoCRAFigLKAWwAu0BeYDIwGTgMsAZyAzwBnwDSAGsANvAcAA9oCAIEDwIMAQhAheBD0CP4EigJIASVAkyUgtAALgAoACoAGQAOQAfACCAGAAZQA0ADUAHkAQwBFACYAE8AKQAVQAxABmADmAH6AQwBEgCjAFKALEAW4AwoBkAGUANEAbIA74B9gH6ARYAjEBHAEdAJSAUEAq4BWwC5gF5AMUAbQA3AB9gEOgImAReAj0BIgCTgE7AKHAVYAsUBaAC2AFwALkAXaAvMBfQDDYGRgZIAycBlgDLgGcgM8AZ8A0iBrAGsgNvAbqA4KByYHKAOXAeKA8cB7QEGAIQgQvAhmBDoCHoEUgI7AR_AkUBJACTIEqgJZgAA&amp;listenerId=" type="audio/mpeg">
+			</audio>
+			</a>
+		</div>
+	<!-- Inizio Codice ShinyStat -->
+		<div id="stat">
+			<script type="text/javascript"
+				src="//codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-43352069-76b6b">
+			</script>
+			<a href="https://www.shinystat.com/it/" target="_top">
+			<img src="//www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-43352069-76b6b" alt="Statistiche accessi" style="border:0px" />
+			</a>
+		</div>
+	<!-- Fine Codice ShinyStat -->
+		<div id="geoInfo_1">
+			<script type="text/javascript"
+				src="https://cdn.livetrafficfeed.com/static/v5/live.js?bc=010409&tc=ffffff&brd1=2853a8&lnk=79c0ff&hc=010409&hfc=79c0ff&nc=19ff19&vv=445&tft=10&ro=1&tz=Europe%2FDublin&res=0">
+			</script>
+			<a id="LTF_live_website_visitor" href="http://livetrafficfeed.com"></a>
+		</div>
+		<span id="Tip_2" class="tip-icon">
+			⚙️
+		</span>
+		<div class="tip-content_2">
+			<div id="geoInfo_2">
+				<script type="text/javascript"
+					src="https://cdn.livetrafficfeed.com/static/online/live.v2.js?text=79c0ff&bg=010409&ro=0&tz=America%2FDublin">
+				</script>
+				<a href="http://livetrafficfeed.com/online-counter"></a>
+			</div>
+			<div id="geoInfo_3">
+				<script type="text/javascript"
+					src="https://cdn.livetrafficfeed.com/static/flag-counter/live.v2.js?row=4&col=3&cod=1&flg=1&bg=010409&txt=79c0ff&ro=0&tz=Europe%2FDublin">
+				</script>
+				<a href="https://livetrafficfeed.com/flag-counter"></a>
+			</div>
+			<div id="geoInfo_4">
+				<script type="text/javascript"
+					src="https://cdn.livetrafficfeed.com/static/static-counter/live.v2.js?text=79c0ff&bg=010409&ro=0&tz=America%2FDublin">
+				</script>
+				<a href="https://livetrafficfeed.com/website-counter"></a>
+			</div>
+		</div>
 		<div class="LogoCont">
 			<img id="Logo105" src="./img/LogoZoo105.png?v=<?php echo time(); ?>" alt="LogoZoo105"></img>
 		</div>
@@ -42,6 +250,9 @@
 			<image id="ZooGifs" src="./img/Zoo1.gif?v=<?php echo time(); ?>" alt="ZooGifs"></image>
 		</div>
 		<div id="Global">
+			<div id="recording-timer">
+				<span>Tempo di registrazione: <span id="recording-time">0:0:00</span></span>
+			</div>
 			<div id="video-wrapper">
 				<div id="bitrateClock">Bitrate: <span id="bitrateValue">0 kbps</span></div>
 				<video id="mediaset-player" controls>
@@ -54,9 +265,71 @@
 			</div>
 			<div id="controls">
 				<button id="playButton">▶️ Play</button>
-				<button id="recButton">🔴 Rec</button>
+				<button id="stopButton">⏹ Stop</button>
+				<button id="recButton">🔴 ▶️ Rec/AutoPlay</button>
+				<br>
 			</div>
-		</div>
+			<span id="Tip_1" class="tip-icon">
+				ℹ️
+			</span>
+			<span class="tip-content_1"><!--
+			--><u>---[SOLO PC]---</u><!--
+		--><br><!--
+			--><u>ISTRUZIONI MOLTO SEMPLICI PER CONVERTIRE IL VIDEO IN MP4 <b style="color: #ffd700;">(ANCHE PER GENTE CHE NON È PROFESSORISSIMA!!!)</b></u><!--
+		--><br><!--
+		--><br><!--
+			--> ● <b>[SE NON CE L'AVETE]: <u>SCARICARE VLC</u></b><!--
+		--><br><!--
+			--> ● SCARICARE IL FILE <b class="fire-text"><u>Convertitore</u></b><br> &nbsp;&nbsp;&nbsp;e appena lo scaricate, rinominatelo in <b class="fire-text"><u>Convertitore.bat</u></b><!--
+		--><br><!--
+		--><br><!--
+			--> ● SELEZIONARE IL VIDEO APPENA REGISTRATO (DA CONVERTIRE) <br> &nbsp;&nbsp;&nbsp;<b class="fire-text"><u>Zoo_GG-MM-AAAA.webm</u></b><!--
+		--><br><!--
+			--> ● TRASCINARE IL VIDEO DA CONVERTIRE SOPRA IL FILE <b>Convertitore.bat</b><!--
+		--><br><!--
+			--> ● <b>ASPETTATE LA FINE DELLA CONVERSIONE DEL VIDEO <br> &nbsp;&nbsp;&nbsp;<u class="fire-text">(APPARIRA UN MESSAGGIO ALLA FINE DELLA CONVERSIONE)</u></b><!--
+		--><br><!--
+			--> ● <b>FINITO</b><!--
+		--></span>
+			<div id="Spoilers" class="spoilers-container">
+				<div class="spoiler" onclick="toggleSpoiler(this)"><!--
+									-->[SOLO PC]<!--
+				--><br><!--
+					-->COSE DA SCARICARE PER LA CONVERSIONE IN MP4<!--
+				--><br><!--
+						--><b class="fire-text" >==>[CLICCAMI MONGOLACCHIONE!!!]<==</b><!--
+				--><div id="spoilerContent" class="spoiler-content">
+						<pre id="Download"><!--
+						-->● <a href="https://get.videolan.org/vlc/last/win64/vlc-3.0.18-win64.exe" download="VLC" target="_blank">VLC - [DOWNLOAD]</a><!--
+						--><br><!--
+						-->● <a href="./Convertitore" download="Convertitore">CONVERTITORE - [DOWNLOAD]</a><!--
+					--></pre>
+					</div>
+				</div>
+			</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', (event) => {
+				const videoPlayer = document.getElementById('mediaset-player');
+				const backward2MinButton = document.getElementById('backward-2-min');
+				const forward2MinButton = document.getElementById('forward-2-min');
+			
+				backward2MinButton.addEventListener('click', () => {
+					rewindVideo(videoPlayer, 2);
+				});
+			
+				forward2MinButton.addEventListener('click', () => {
+					fastForwardVideo(videoPlayer, 2);
+				});
+			
+				function rewindVideo(player, minutes) {
+					player.currentTime -= minutes * 60;
+				}
+			
+				function fastForwardVideo(player, minutes) {
+					player.currentTime += minutes * 60;
+				}
+			});
+		</script>
 		<script>
 			fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
 			.then(response => response.text())
@@ -86,83 +359,160 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', (event) => {
 				const videoPlayer = document.getElementById('mediaset-player');
-				const backward2MinButton = document.getElementById('backward-2-min');
-				const forward2MinButton = document.getElementById('forward-2-min');
-				const videoSource = document.querySelector('source');
 				const playButton = document.getElementById('playButton');
+				const stopButton = document.getElementById('stopButton');
+				const recordingTimeElement = document.getElementById('recording-time');
+				let recordingStartTime;
+				let recordingInterval;
+				let isPlaying = false;
+				let lastPlayTime = 0;
+				let playStartTime = null;
+
+				// Funzione per attivare lo stile CSS quando il timer si attiva
+				function activateTimerStyle() {
+				recordingTimeElement.classList.add('active-timer');
+				}
 				
+				// Funzione per ripristinare lo stile CSS quando il timer si ferma
+				function resetTimerStyle() {
+				recordingTimeElement.classList.remove('active-timer');
+				}
+
 				playButton.addEventListener('click', () => {
-					if (videoPlayer.paused) {
-						// cambia il testo del pulsante a "Pause", Se il video è in pausa.
+					if (!isPlaying) {
+						// Inizia la riproduzione.
 						videoPlayer.play();
 						playButton.textContent = "⏸ Pause";
+						console.log('Play Button Clicked - Video Playing');
+						activateTimerStyle(); // Attiva lo stile quando si avvia la riproduzione
+						isPlaying = true;
+						if (!recordingStartTime) {
+							// Inizia il conteggio del tempo di registrazione se non è già in corso.
+							recordingStartTime = Date.now(); // Aggiorna il tempo di registrazione al momento attuale
+							recordingInterval = setInterval(updateRecordingTime, 1000);
+						}
 					} else {
-						// cambia il testo del pulsante a "Play", Se il video è in riproduzione.
+						// Mette in pausa la riproduzione.
 						videoPlayer.pause();
 						playButton.textContent = "▶️ Play";
+						console.log('Play Button Clicked - Video Paused');
+						resetTimerStyle(); // Ripristina lo stile quando si ferma la riproduzione
+						isPlaying = false;
+						if (recordingStartTime) {
+							// Mette in pausa il conteggio del tempo di registrazione.
+							clearInterval(recordingInterval);
+							recordingInterval = null;
+							lastPlayTime += Date.now() - recordingStartTime; // Aggiunge al tempo trascorso il tempo trascorso durante l'ultima riproduzione
+							recordingStartTime = null; // Resetta recordingStartTime
+						}
 					}
 				});
-			backward2MinButton.addEventListener('click', () => {
-				videoPlayer.currentTime -= 120; // Sottrae 2 minuti (120 secondi).
-			});
-
-			forward2MinButton.addEventListener('click', () => {
-				videoPlayer.currentTime += 120; // Aggiunge 2 minuti (120 secondi).
-			});
-			});
-		</script>
-		<script>
-			const videoPlayer = document.getElementById('mediaset-player');
-			const recButton = document.getElementById('recButton');
-			let mediaRecorder;
-			let recordedChunks = [];
 			
-			recButton.addEventListener('click', () => {
+				stopButton.addEventListener('click', () => {
+					if (isPlaying) {
+						videoPlayer.pause();
+						playButton.textContent = "▶️ Play";
+						isPlaying = false;
+					}
+					videoPlayer.currentTime = 0;
+					console.log('Stop Button Clicked - Video Stopped');
+					resetTimerStyle(); // Ripristina lo stile quando si ferma la registrazione
+					clearInterval(recordingInterval);
+					recordingStartTime = null;
+					lastPlayTime = 0;
+					recordingTimeElement.textContent = '0:0:00';
+				});
+							
+				const recButton = document.getElementById('recButton');
+				let mediaRecorder;
+				let recordedChunks = [];
+			
+				recButton.addEventListener('click', () => {
 				if (mediaRecorder && mediaRecorder.state === 'recording') {
-				// Ferma la registrazione se è già in corso
-				mediaRecorder.stop();
-				recButton.textContent = 'Rec';
+					mediaRecorder.stop();
+					recButton.textContent = '🔴 ▶️ Rec/AutoPlay';
+					console.log('Rec Button Clicked - Video Recording');
+					clearInterval(recordingInterval);
+					recordingStartTime = null;
+					recordingTimeElement.textContent = '0:0:00';
+					playButton.textContent = "▶️ Play";
+					console.log('Play Button Clicked - Video Paused');
+					resetTimerStyle(); // Ripristina lo stile quando si ferma la registrazione
 				} else {
-				// Inizia la registrazione.
-				try {
-					// Imposta le opzioni del codec video H.264.
+					try {
 					const options = {
-					mimeType: 'video/webm; codecs="avc1.64001E"',
+						mimeType: 'video/webm; codecs="vp8"',
 					};
 					mediaRecorder = new MediaRecorder(videoPlayer.captureStream(), options);
-				} catch (e) {
+					} catch (e) {
 					console.error('Impossibile registrare: ' + e);
 					return;
-				}
-			
-				const today = new Date();
-				const formattedDate = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
-				const fileName = `Zoo_${formattedDate}.mp4`;
-			
-				mediaRecorder.ondataavailable = (event) => {
-					if (event.data.size > 0) {
-					recordedChunks.push(event.data);
 					}
-				};
-			
-				mediaRecorder.onstop = () => {
-					const blob = new Blob(recordedChunks, { type: 'video/mp4; codecs="avc1.64001E"' });
+				
+					if (!isPlaying) {
+					videoPlayer.play();
+					playButton.textContent = "⏸ Pause";
+					console.log('Play Button Clicked - Video Playing');
+					activateTimerStyle(); // Attiva lo stile quando si avvia la registrazione
+					}
+				
+					const today = new Date();
+					const formattedDate = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
+					const fileName = `Zoo_${formattedDate}.webm`;
+				
+					recordingStartTime = Date.now();
+					recordingInterval = setInterval(updateRecordingTime, 1000);
+				
+					mediaRecorder.ondataavailable = (event) => {
+					if (event.data.size > 0) {
+						recordedChunks.push(event.data);
+					}
+					};
+				
+					mediaRecorder.onstop = () => {
+					const blob = new Blob(recordedChunks, { type: 'video/mp4; codecs="h264"' });
 					const url = URL.createObjectURL(blob);
-			
+				
 					const a = document.createElement('a');
 					a.style.display = 'none';
 					a.href = url;
-					a.download = fileName; // Utilizza il nome del file con la data.
+					a.download = fileName;
 					document.body.appendChild(a);
 					a.click();
 					window.URL.revokeObjectURL(url);
-			
+				
 					recordedChunks = [];
-					recButton.textContent = '🔴 Rec';
-				};
+					recButton.textContent = '🔴 ▶️ Rec/AutoPlay';
+					console.log('Rec Button Clicked - Video Recording');
+				
+					videoPlayer.pause();
+				
+					clearInterval(recordingInterval);
+					recordingStartTime = null;
+					lastPlayTime = 0;
+					recordingTimeElement.textContent = '0:0:00';
+					resetTimerStyle(); // Ripristina lo stile quando si ferma la registrazione
+					};
+				
+					mediaRecorder.start();
+					recButton.textContent = '⏹ Stop-Rec';
+					console.log('Stop Button Clicked - Video Recording');
+				}
+				});
 			
-				mediaRecorder.start();
-				recButton.textContent = '⏹ Stop';
+				function updateRecordingTime() {
+					if (recordingStartTime) {
+						const currentTime = Date.now();
+						const elapsedTime = currentTime - recordingStartTime;
+						const totalElapsedTime = elapsedTime + lastPlayTime;
+						const seconds = Math.floor(totalElapsedTime / 1000);
+						const minutes = Math.floor(seconds / 60);
+						const hours = Math.floor(minutes / 60);
+						const remainingSeconds = seconds % 60;
+						const timeString = `${hours}:${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+						recordingTimeElement.textContent = timeString;
+						console.log('Recording Time Updated to: ' + timeString);
+					}
 				}
 			});
 		</script>
@@ -245,7 +595,9 @@
 						image.style.opacity = opacity;
 						if (opacity <= 0) {
 							clearInterval(fadeOutInterval); // Interrompe l'animazione di dissolvenza all'uscita.
-							imageContainer.removeChild(image); // Rimuove l'immagine dopo l'animazione.
+							if (imageContainer.contains(image)) {
+								imageContainer.removeChild(image); // Rimuove l'immagine dopo l'animazione.
+							}
 						}
 					}, 50);
 				}, animationDuration * 5000); // Attende il completamento dell'animazione di movimento prima di avviare l'uscita.
