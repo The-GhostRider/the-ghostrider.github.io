@@ -1496,4 +1496,22 @@
 		opacity: 0;
 		z-index: 1;
 	}
+
+#Fascia {
+	top: 240%;
+    left: 91%;
+    scale: 190%;
+	width: 175%;
+    font-size: 20px;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(230, 0, 126, 0.9), rgba(1,33,77, 0.9), rgba(252, 177, 17, 0.9));
+    position: absolute;
+    border: 0px solid;
+    border-radius: 46px;
+    padding: 16px;
+    box-shadow: -1px -2px 10px 2px rgb(255 255 255);
+    transition: transform 1s, box-shadow 1s;
+    transform: rotate(5deg);
+    z-index: 2;
+	}
 }
