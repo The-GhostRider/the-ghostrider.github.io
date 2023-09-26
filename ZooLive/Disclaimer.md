@@ -1,3 +1,4 @@
+#ITA<br>
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#<br>
        <h2>DISCLAIMER: SCOPO DIDATTICO E DI PROGETTAZIONE</h2>
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
@@ -14,4 +15,25 @@ Questo progetto potrebbe includere collegamenti ipertestuali a siti web esterni 
 Questo progetto potrebbe raccogliere informazioni sulla tua attività di navigazione o utilizzo tramite strumenti di analisi o cookie, nel rispetto delle leggi sulla privacy vigenti. Ti consigliamo di leggere la nostra politica sulla privacy per comprendere come raccogliamo, utilizziamo e proteggiamo le tue informazioni personali.
 
 L'uso di questo progetto implica l'accettazione dei termini e delle condizioni sopra indicati. Se non sei d'accordo con questi termini e condizioni, ti preghiamo di interrompere l'uso di questo progetto.
+</b>
+<br>
+<br>
+<br>
+#EN<br>
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#<br>
+       <h2>DISCLAIMER: EDUCATIONAL AND DESIGN PURPOSES</h2>
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+<br>
+<br>
+<b>
+This project has been created for educational and design purposes. We do not promote, endorse, or encourage any copyright infringement or improper use of copyrighted content.
+
+The use of this website and its features is at your own risk. The authors and creators of this project are not responsible for any legal consequences or damages resulting from the improper use of information, multimedia content, or features provided by this project.
+This project is exclusively for educational (and illustrative) purposes, and I have chosen ```the Zoo``` as the theme as a fan of this radio program.
+
+This project may include hyperlinks to external websites or third-party resources. We have no control over such websites or resources and are not responsible for their content or privacy practices. Accessing external websites through hyperlinks is at your discretion and risk.
+
+This project may collect information about your browsing activity or usage through analytics tools or cookies, in compliance with applicable privacy laws. We recommend reading our privacy policy to understand how we collect, use, and protect your personal information.
+
+The use of this project implies acceptance of the terms and conditions stated above. If you do not agree with these terms and conditions, please discontinue the use of this project.
 </b>
