@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta property="og:type" content="website">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:url" content="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta property="og:title" content="⭐️⭐️⭐️ SQL Code -> Simplified ⭐️⭐️⭐️">
+		<meta name="description" content="SQL Code Simplifier v1.0">
+		<meta property="og:image" content="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/sql.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:description" content="SQL Code Simplifier v1.0">
+		<meta name="generator" content="Powered by 🔥The GhostRider🔥 Page Builder.">
+		<meta name="ssl-certificate" content="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/lastrevenge.ddns.net.crt">
+		<meta property="og:certificate" content="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/lastrevenge.ddns.net.crt">
+		<meta property="og:cert" content="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/lastrevenge.ddns.net.crt">
+		<title>
+			⭐️⭐️⭐️ SQL Code -> Simplified ⭐️⭐️⭐️
+		</title>
+		<link rel="alternate" href="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/" hreflang="x-default">
+		<link rel="canonical" href="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/">
+		<link rel="stylesheet" href="./highlight/styles/github-dark.css?v=<?php echo time(); ?>">
+		<script src="./highlight/highlight.min.js?v=<?php echo time(); ?>">
+		</script>
+		<script>
+			hljs.highlightAll();
+		</script>
+		<link rel="stylesheet" type="text/css" href="./CSS-SQL/SQL.css?v=<?php echo time(); ?>">
+	
+		<script>
+			window.addEventListener('load', function() {
+			console.log("La funzione load è stata chiamata.");
+				const tipIcon = document.querySelectorAll(`#Tip${index}`);
+				const iconContentData = [
+				{ iconId: `#Tip${index}` }
+				];
+				
+				iconContentData.forEach(data => {
+				const icon = document.getElementById(data.iconId);
+				const content = document.querySelector(data.contentClass);
+				
+				if (icon && content) {
+					const tipIconRect = icon.getBoundingClientRect();
+					const tipTop = tipIconRect.top + tipIconRect.height * 0.31;
+					const tipLeft = tipIconRect.left + tipIconRect.width * 0.39;
+					
+					content.style.top = tipTop + 'px';
+					content.style.left = tipLeft + 'px';
+					content.style.display = 'none';
+				}
+			});
+		
+			});
+		</script>
+
+		<script>
+			function addFadeEffect(selector) {
+				const elements = document.querySelectorAll(selector);
+
+				elements.forEach((element) => {
+					let opacity = 0;
+					let scale = 0.1;
+					let interval;
+					const elementContent = element.nextElementSibling; // Ottieni il contenuto del Tip o dello Spoiler
+
+					element.addEventListener("mouseenter", function () {
+						clearInterval(interval);
+						elementContent.style.display = "block";
+						fadeIn();
+					});
+
+					element.addEventListener("mouseleave", function () {
+						clearInterval(interval);
+						fadeOut();
+					});
+
+					function fadeIn() {
+						interval = setInterval(function () {
+							opacity += 0.1;
+							scale += 0.1; // Aumenta la scala durante il fadeIn
+							elementContent.style.opacity = opacity;
+							elementContent.style.transform = `scale(${scale}) translate(-50%, -50%)`;
+							if (opacity >= 1) {
+								clearInterval(interval);
+							}
+						}, 10); // Regola la velocità della dissolvenza in base alle tue preferenze
+					}
+
+					function fadeOut() {
+						interval = setInterval(function () {
+							opacity -= 0.1;
+							scale -= 0.1; // Riduci la scala durante il fadeOut
+							elementContent.style.opacity = opacity;
+							elementContent.style.transform = `scale(${scale}) translate(50%, -50%)`;
+							if (opacity <= 0) {
+								clearInterval(interval);
+								elementContent.style.display = "none";
+							}
+						}, 40); // Regola la velocità della dissolvenza in base alle tue preferenze
+					}
+				});
+			}
+
+			document.addEventListener("DOMContentLoaded", function () {
+				addFadeEffect(`.tip-icon`);
+			});
+		</script>
+
+		<script>
+			const index = (0, 1, 2, 3);
+			// Funzione per chiudere tutti gli spoiler
+			function closeAllSpoilers() {
+				const spoilerContents = document.querySelectorAll(`.spoiler-content`);
+				spoilerContents.forEach((spoilerContent) => {
+				spoilerContent.style.display = 'none';
+				});
+			}
+
+			// Funzione per aprire o chiudere lo spoiler
+			function toggleSpoiler(index) {
+			const spoilerContent = document.querySelector(`#spoilerContent${index}`);
+				if (spoilerContent.style.display === 'block') {
+					spoilerContent.classList.add('fadeOut');
+					setTimeout(function() {
+					spoilerContent.style.display = 'none';
+					spoilerContent.classList.remove('fadeOut');
+					}, 1500);
+				} else {
+					closeAllSpoilers(); // Chiudi tutti gli spoiler prima di aprirne uno
+					spoilerContent.style.display = 'block';
+					spoilerContent.classList.add('fadeIn');
+					setTimeout(function() {
+					spoilerContent.classList.remove('fadeIn');
+					}, 1500);
+				}
+			}
+
+			// Aggiungi event listener per il click su spoiler
+			const spoilers = document.querySelectorAll(`.spoilers-container > .spoiler`);
+			spoilers.forEach((spoiler, index) => {
+				spoiler.addEventListener('click', () => {
+				toggleSpoiler(index);
+				});
+			});
+		</script>
+
+		<script>
+			function abilitaPulsante() {
+			console.log("La funzione abilitaPulsante è stata chiamata.");
+				const selectElement0 = document.getElementById("chiavePrimaria0");
+				const selectElement1 = document.getElementById("chiavePrimaria1");
+				const pulsanteSemplifica = document.getElementById("semplificaCodice");
+				const isSelect0Valid = selectElement0.value !== "chiave0";
+				const isSelect1Valid = selectElement1.value !== "chiave0";
+				pulsanteSemplifica.disabled = !(isSelect0Valid || isSelect1Valid);
+			}
+		</script>
+
+		<script>
+function semplificaCodice() {
+    console.log("La funzione semplificaCodice è stata chiamata.");
+
+    // Ottiene i riferimenti agli elementi select delle chiavi primarie
+    const chiavePrimaria0Select = document.getElementById("chiavePrimaria0");
+    const chiavePrimaria1Select = document.getElementById("chiavePrimaria1");
+    const chiavePrimaria0Value = chiavePrimaria0Select.value;
+    const chiavePrimaria1Value = chiavePrimaria1Select.value;
+
+    // Crea oggetti per rappresentare le chiavi primarie selezionate
+    const chiavePrimaria0 = {
+        name: chiavePrimaria0Select.options[chiavePrimaria0Select.selectedIndex].text,
+        index: chiavePrimaria0Select.selectedIndex,
+    };
+
+    const chiavePrimaria1 = {
+        name: chiavePrimaria1Select.options[chiavePrimaria1Select.selectedIndex].text,
+        index: chiavePrimaria1Select.selectedIndex,
+    };
+
+    // Ottiene il testo dell'area di testo contenente il codice SQL originale
+    const codiceOriginaleTextarea = document.getElementById("codiceOriginale");
+    const codiceOriginale = codiceOriginaleTextarea.value;
+
+    // Chiama la funzione semplificaIlCodiceQui per ottenere il codice semplificato
+    const codiceSemplificato = semplificaIlCodiceQui(codiceOriginale, chiavePrimaria0Select, chiavePrimaria1Select);
+
+    // Ottiene il riferimento all'area di testo per il codice semplificato
+    const codiceSemplificatoPre = document.getElementById("codiceSemplificato");
+
+    // Aggiorna il contenuto dell'area di testo con il codice semplificato
+    codiceSemplificatoPre.textContent = codiceSemplificato;
+
+    // Evidenzia la sintassi del codice semplificato utilizzando la libreria hljs (highlight.js)
+    hljs.highlightElement(codiceSemplificatoPre);
+
+    // Abilita o disabilita il pulsante di copia in base alla lunghezza del codice semplificato
+    const copiaButton = document.getElementById("copiaButton");
+    copiaButton.disabled = !codiceSemplificato || codiceSemplificato.length === 0;
+
+    // Mostra un messaggio "Simplified!" se il codice è stato semplificato con successo
+    if (codiceSemplificato) {
+        document.getElementById("semplificaCodice").textContent = "Simplified!";
+    } else {
+        // Altrimenti, rimuovi il testo "Simplified!" dal pulsante
+        document.getElementById("semplificaCodice").textContent = "Simplify Code";
+
+        // Rimuovi il contenuto dall'area di testo del codice semplificato
+        codiceSemplificatoPre.textContent = "";
+    }
+}
+
+        function semplificaIlCodiceQui(codiceOriginale, chiavePrimaria0Select, chiavePrimaria1Select) {
+            console.log("La funzione semplificaIlCodiceQui è stata chiamata.");
+
+            // Ottiene i testi delle chiavi primarie selezionate dalle select boxes
+            const chiavePrimaria0 = chiavePrimaria0Select.options[chiavePrimaria0Select.selectedIndex].text;
+            const chiavePrimaria1 = chiavePrimaria1Select.options[chiavePrimaria1Select.selectedIndex].text;
+
+            // Divide il codice originale in righe
+            const righe = codiceOriginale.trim().split('\n');
+
+            // Inizializza le strutture dati per DELETE FROM, UPDATE e INSERT INTO
+            const deleteAndUpdateStatements = [];
+            const insertStatementTemplates = [];
+			const gruppi = new Map();
+			let currentStatement = [];
+			const riga = codiceOriginale.trim();
+            // Separa le righe in base al tipo di istruzione
+            for (const riga of righe) {
+                if (riga.startsWith("DELETE FROM") || riga.startsWith("UPDATE")) {
+                    if (currentStatement) {
+                        deleteAndUpdateStatements.push(currentStatement);
+                    }
+                    currentStatement = riga;
+                } else if (riga.startsWith("INSERT INTO")) {
+                    insertStatementTemplates.push(riga);
+                } else if (currentStatement) {
+                    currentStatement += '\n' + riga;
+                }
+            }
+            if (currentStatement) {
+                deleteAndUpdateStatements.push(currentStatement);
+            }
+
+            // Costruisci l'istruzione finale con i valori raggruppati per INSERT INTO
+            const istruzioniSemplificate = [];
+            for (const insertStatementTemplate of insertStatementTemplates) {
+                const valuesStart = insertStatementTemplate.indexOf("VALUES") + "VALUES".length;
+                const valuesContent = insertStatementTemplate.substring(valuesStart).trim();
+
+                // Verifica se la riga di inserimento inizia con una parentesi tonda aperta e termina con un punto e virgola
+                if (valuesContent.startsWith("(") && valuesContent.endsWith(";")) {
+                    const valuesData = valuesContent.substring(1, valuesContent.length - 2);
+                    const valuesArray = valuesData.split("),");
+
+                    const newValuesArray = valuesArray.map(valuesSet => {
+                        const values = valuesSet.split(",").map(value => value.trim());
+                        const modifiedValues = values.map(value => value === "''" ? value : "" + value + "");
+                        return `(${modifiedValues.join(", ")})`;
+                    });
+
+                    const newValuesContent = newValuesArray.join(",\n");
+
+                    istruzioniSemplificate.push(insertStatementTemplate.replace('VALUES', `VALUES\n${newValuesContent}`));
+                }
+            }
+
+
+    // Gestisci istruzioni DELETE FROM e UPDATE
+    for (let i = 0; i < righe.length; i++) {
+        const riga = righe[i].trim();
+        if (riga.startsWith("DELETE FROM") || riga.startsWith("UPDATE")) {
+            const chiave = riga.match(new RegExp("`" + chiavePrimaria0 + "` = (\\d+)"))[1];
+            if (!gruppi.has(chiave)) {
+                gruppi.set(chiave, []);
+            }
+            gruppi.get(chiave).push(riga);
+        }
+    }
+
+    // Costruisci le istruzioni semplificate per DELETE FROM e UPDATE
+    gruppi.forEach((queryGroup, chiave) => {
+        const valorichiavePrimaria0 = queryGroup.map(riga => riga.match(new RegExp("`" + chiavePrimaria0 + "` = (\\d+)"))[1]);
+        const clausolachiavePrimaria0 = "`" + chiavePrimaria0 + "` IN (" + valorichiavePrimaria0.join(', ') + ")";
+        const parti = queryGroup[0].split("WHERE");
+        const altreChiavi = valorichiavePrimaria0.filter(id => id !== chiave).join(', ');
+
+        let nuovaIstruzione = parti[0] + "WHERE " + clausolachiavePrimaria0;
+        if (altreChiavi !== "") {
+            if (!valorichiavePrimaria0.includes(chiave)) {
+                nuovaIstruzione += (chiavePrimaria1 ? " AND " + chiavePrimaria1 + parti[1] : "") + parti[1];
+            } else {
+                nuovaIstruzione += parti[1];
+            }
+        } else {
+            nuovaIstruzione += parti[1].replace(/AND\s+`[^`]+`\s+IN\s+\(,\s*\d+\)\s*$/, "");
+        }
+        istruzioniSemplificate.push(nuovaIstruzione);
+    });
+
+    // Rimuove le chiavi primarie dalla sezione WHERE delle istruzioni semplificate
+    istruzioniSemplificate.forEach((istruzione, index) => {
+        istruzioniSemplificate[index] = istruzione.replace(new RegExp("`" + chiavePrimaria0 + "`\\s*(=|IN)\\s*\\(\\d+\\)", 'g'), '');
+    });
+
+    // Crea una stringa contenente gli ID raggruppati
+    const idRaggruppati = Array.from(gruppi.keys()).join(', ');
+    let queryRaggruppata;
+
+    // Determina se creare una query con clausola WHERE o no
+    if (chiavePrimaria0Select.value === "chiave1") {
+        queryRaggruppata = istruzioniSemplificate[0];
+    } else {
+        const clausolaRaggruppata = "`" + chiavePrimaria0 + "` IN (" + idRaggruppati + ")";
+        const deleteAndUpdateQueries = istruzioniSemplificate.filter(query => query.startsWith("DELETE FROM") || query.startsWith("UPDATE"));
+        const modifiedQueries = deleteAndUpdateQueries.map(query => {
+            const modifiedQuery = query.replace(new RegExp("`" + chiavePrimaria0 + "`\\s*=\\s*\\d+", 'g'), '');
+            return modifiedQuery;
+        });
+        const simplifiedDeleteAndUpdateStatements = modifiedQueries.join("\n");
+        queryRaggruppata = istruzioniSemplificate[0].split("WHERE")[0] + "WHERE " + clausolaRaggruppata;
+        let altreCondizioni = istruzioniSemplificate[0].split("WHERE")[1] || "";
+        altreCondizioni = altreCondizioni.replace(new RegExp("`" + chiavePrimaria0 + "`\\s*=\\s*\\d+", 'g'), "");
+        altreCondizioni = altreCondizioni.replace(/\(\)\s*AND\s*/g, "");
+        if (altreCondizioni.trim().length !== 0 && altreCondizioni.trim() != "();") {
+            queryRaggruppata += (" AND " + altreCondizioni.trim());
+        } else {
+            queryRaggruppata += ";";
+        }
+    }
+
+     // Unisci le istruzioni DELETE FROM, UPDATE e INSERT INTO
+            const istruzioniFinali = deleteAndUpdateStatements.concat(istruzioniSemplificate);
+
+   // Restituisci l'istruzione SQL raggruppata o istruzioniFinali
+    if (riga.startsWith("DELETE FROM") || riga.startsWith("UPDATE")) {
+        return queryRaggruppata;
+    } else {
+        return istruzioniFinali.join("\n");
+    }
+}
+
+			// Altre funzioni per la copia del contenuto
+			function copiaContenuto(idOutput, idButton) {
+			console.log("La funzione copiaContenuto è stata chiamata.");
+				const areaOutput = document.getElementById(idOutput);
+				const selezione = window.getSelection();
+				const range = document.createRange();
+				range.selectNodeContents(areaOutput);
+				selezione.removeAllRanges();
+				selezione.addRange(range);
+				document.execCommand("copy");
+				selezione.removeAllRanges();
+				document.getElementById(idButton).textContent = "Copied!";
+			}
+
+			function copiaTesto() {
+			console.log("La funzione copiaTesto è stata chiamata.");
+				copiaContenuto("codiceSemplificato", "copiaButton");
+			}
+		</script>
+	</head>
+	<body class="elemento-auto-resize">
+		<h1> SQL Code Simplifier<!--
+		--><img id="Logo" data-url="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/index.html" src="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/sql.png?v=<?php echo time(); ?>"><!--
+		--><span id="tooltip-link" class="tooltip"><!--
+			-->Click: Copy to Share Website Link<!--
+		--></span><!--
+		--></img><!--
+	--></h1>
+		<div id="cfd">
+			<label>Code for Testing:</label>
+		</div>
+
+		<div id="Spoilers" class="spoilers-container">
+			<div class="spoiler" onclick="toggleSpoiler(0)">
+				<span id="Tip1" class="tip-icon">
+					?
+				</span>
+					<span class="tip-content"><!--
+					-->Example of a Query that will work correctly.<!--
+				--></span>&nbsp;&nbsp;Show CODE: DELETE FROM<!--
+			--><div id="spoilerContent0" class="spoiler-content">
+				<button id="copiaBTest0" onclick="copiaContenuto('Test0', 'copiaBTest0')"><!--
+				-->Copy
+				</button>
+					<pre id="Test0"><!--
+					--><code class="language-sql"><!--
+						-->DELETE FROM `conditions` WHERE (`SourceTypeOrReferenceId` = 19) AND (`SourceGroup` = 0) AND (`SourceEntry` = 8353) AND (`SourceId` = 0) AND (`ElseGroup` = 0) AND (`ConditionTypeOrReference` = 12) AND (`ConditionTarget` = 0) AND (`ConditionValue1` = 12) AND (`ConditionValue2` = 0) AND (`ConditionValue3` = 0);
+<br>
+<br><!--
+						-->DELETE FROM `conditions` WHERE (`SourceTypeOrReferenceId` = 19) AND (`SourceGroup` = 0) AND (`SourceEntry` = 8355) AND (`SourceId` = 0) AND (`ElseGroup` = 0) AND (`ConditionTypeOrReference` = 12) AND (`ConditionTarget` = 0) AND (`ConditionValue1` = 12) AND (`ConditionValue2` = 0) AND (`ConditionValue3` = 0);<!--
+					--></code><!--
+				--></pre>
+				</div>
+			</div>
+			<div class="spoiler" onclick="toggleSpoiler(1)">
+				<span id="Tip2" class="tip-icon">
+					!
+				</span>
+				<span class="tip-content"><!--
+				-->[To-Fix Soon]: Currently, Function not working properly.<!--
+			--></span>&nbsp;&nbsp;Show CODE: INSERT INTO<!--
+			--><div id="spoilerContent1" class="spoiler-content">
+				<button id="copiaBTest1" onclick="copiaContenuto('Test1', 'copiaBTest1')"><!--
+				-->Copy
+				</button>
+					<pre id="Test1"><!--
+					--><code class="language-sql"><!--
+						-->INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES<!--
+--><br><!--				--> (19, 0, 8353, 0, 0, 47, 0, 8311, 64, 0, 1, 0, 0, '', 'Prevents quest from being available after completing quest Hallows End Treats for Jespers');
+<br>
+<br><!--
+						-->INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES<!--
+--><br><!--				--> (19, 0, 8354, 0, 0, 47, 0, 8311, 64, 0, 1, 0, 0, '', 'Prevents quest from being available after completing quest Hallows End Treats for Jespers');<!--
+					--></code><!--
+				--></pre>
+				</div>
+			</div>
+			<div class="spoiler" onclick="toggleSpoiler(2)">
+				<span id="Tip1" class="tip-icon">
+					?
+				</span>
+				<span class="tip-content"><!--
+				-->Example of a Query that will work correctly.<!--
+			--></span>&nbsp;&nbsp;Show CODE: UPDATE 1<!--
+			--><div id="spoilerContent2" class="spoiler-content">
+				<button id="copiaBTest2" onclick="copiaContenuto('Test2', 'copiaBTest2')"><!--
+				-->Copy
+				</button>
+					<pre id="Test2"><!--
+					--><code class="language-sql"><!--
+						-->UPDATE `creature_template` SET `minlevel` = 9, `maxlevel` = 10, `type` = 2 WHERE (`entry` = 43);
+<br>
+<br><!--
+						-->UPDATE `creature_template` SET `minlevel` = 9, `maxlevel` = 10, `type` = 2 WHERE (`entry` = 44);
+<br>
+<br><!--
+						-->UPDATE `creature_template` SET `minlevel` = 9, `maxlevel` = 10, `type` = 2 WHERE (`entry` = 45);<!--
+					--></code><!--
+				--></pre>
+				</div>
+			</div>
+			<div class="spoiler" onclick="toggleSpoiler(3)">
+				<span id="Tip3" class="tip-icon">
+					?
+				</span>
+				<span class="tip-content"><!--
+				-->Example of a Query that will work (Almost) because the logic of the function does not expect this exception.<!--
+			--></span>&nbsp;&nbsp;Show CODE: DELETE FROM 2<!--
+			--><div id="spoilerContent3" class="spoiler-content">
+				<button id="copiaBTest3" onclick="copiaContenuto('Test3', 'copiaBTest3')"><!--
+				-->Copy
+				</button>
+					<pre id="Test3"><!--
+					--><code class="language-sql"><!--
+						-->DELETE FROM `smart_scripts` WHERE (`source_type` = 0) AND (`entryorguid` = 43);
+<br>
+<br><!--
+						-->DELETE FROM `smart_scripts` WHERE (`source_type` = 0) AND (`entryorguid` = 42);<!--
+					--></code><!--
+				--></pre>
+				</div>
+			</div>
+		</div>
+
+		<div id="PK">
+			<label for="chiavePrimaria0">
+				Primary Key Name:
+			</label><!--
+--><br><!--
+--><br><!--
+		--><span id="Tip1" class="tip-icon"><!--
+			-->?<!--
+		--></span><!--
+		--><span class="tip-content"><!--
+			-->This parameter is essential because it determines which ID will be grouped for Query simplification.<br><!--
+			-->In case of INSERT INTO set <b style="color: #ff0000;">"INSERT INTO"</b><!--
+		--></span>
+			<select id="chiavePrimaria0" onchange="abilitaPulsante()">
+				<option class="custom-select" value="chiave0">
+				</option>
+				<option class="custom-option" value="chiave1">
+					INSERT INTO                      
+				</option>                            
+				<option class="custom-select" value="chiave2">
+					SourceEntry                      
+				</option>                            
+				<option class="custom-select" value="chiave3">
+					Entry                            
+				</option>                            
+				<option class="custom-select" value="chiave4">
+					entry                            
+				</option>                            
+				<option class="custom-select" value="chiave5">
+					ID                               
+				</option>                            
+				<option class="custom-select" value="chiave6">
+					id                               
+				</option>                            
+				<option class="custom-select" value="chiave7">
+					guid                             
+				</option>                            
+				<option class="custom-select" value="chiave8">
+					CreatureID                       
+				</option>                            
+				<option class="custom-select" value="chiave9">
+					DisplayID
+				</option>
+				<option class="custom-select" value="chiave10">
+					CreatureEntry                    
+				</option>                            
+				<option class="custom-select" value="chiave11">
+					eventEntry                       
+				</option>                            
+				<option class="custom-select" value="chiave12">
+					entryorguid
+				</option>
+				<option class="custom-select" value="chiave13">
+					source_type
+				</option>
+			</select>
+			<span id="Tip2" class="tip-icon">
+				!
+			</span>
+			<span class="tip-content"><!--
+			--><b><!--
+				-->[To Fix]: <!--
+			--></b><!--
+				-->This is just a "Preset" for future setting.<!--
+		--></span>
+			<select id="chiavePrimaria1" onchange="abilitaPulsante()" disabled>
+				<option class="custom-select" value="chiave0">
+				</option>
+				<option class="custom-select" value="chiave1">
+					INSERT INTO                      
+			</option>                            
+				<option class="custom-select" value="chiave2">
+					SourceEntry                      
+				</option>                            
+				<option class="custom-select" value="chiave3">
+					Entry                            
+				</option>                            
+				<option class="custom-select" value="chiave4">
+					entry                            
+				</option>                            
+				<option class="custom-select" value="chiave5">
+					ID                               
+				</option>                            
+				<option class="custom-select" value="chiave6">
+					id                               
+				</option>                            
+				<option class="custom-select" value="chiave7">
+					guid                             
+				</option>                            
+				<option class="custom-select" value="chiave8">
+					CreatureID                       
+				</option>                            
+				<option class="custom-select" value="chiave9">
+					DisplayID
+				</option>
+				<option class="custom-select" value="chiave10">
+					CreatureEntry                    
+				</option>                            
+				<option class="custom-select" value="chiave11">
+					eventEntry                       
+				</option>                            
+				<option class="custom-select" value="chiave12">
+					entryorguid
+				</option>
+				<option class="custom-select" value="chiave13">
+					source_type
+				</option>
+			</select><!--
+		--><button id="semplificaCodice" class="fire-text" onclick="semplificaCodice()" disabled><!--
+			-->Simplify Code<!--
+		--></button><!--
+		--><button id="cancellaButton"><!--
+			-->Erase<!--
+		--></button><!--
+	--></div><!--
+	--><div id="elaborazione"><!--
+		--><code id="codiceContainer"><!--
+			--><textarea id="codiceOriginale" placeholder="PASTE HERE YOUR SQL CODE TO SIMPLIFY"></textarea><!--
+		--></code><!--
+--><br><!--
+		--><div id="ssc"><!--
+			-->Simplified SQL Code:<!--
+		--></div><!--
+--><br><!--
+		--><button id="copiaButton" class="fire-text" onclick="copiaTesto()" disabled><!--
+			-->Copy<!--
+		--></button><!--
+--><br><!--
+		--><pre id="codiceSemplificato" class="language-sql"><!--
+		--></pre><!--
+	--></div><!--
+	--><script>
+			const codiceSemplificatoPre = document.getElementById('codiceSemplificato');
+			const codiceOriginaleTextarea = document.getElementById('codiceOriginale');
+			const cancellaButton = document.getElementById('cancellaButton');
+			const semplificaCodiceButton = document.getElementById('semplificaCodice');
+			const copiaButton = document.getElementById('copiaButton');
+			const chiavePrimaria0Select = document.getElementById('chiavePrimaria0');
+			const chiavePrimaria1Select = document.getElementById('chiavePrimaria1');
+			cancellaButton.addEventListener('click', () => {
+			console.log("La funzione Erased è stata chiamata.");
+			codiceSemplificatoPre.innerHTML = '';
+			codiceOriginaleTextarea.value = '';
+			semplificaCodiceButton.textContent = "Simplify Code"; // Reimposta il testo del pulsante
+			copiaButton.textContent = "Copy";
+			chiavePrimaria0Select.value = "chiave0";
+			chiavePrimaria1Select.value = "chiave0";
+			setTimeout(() => {
+				cancellaButton.textContent = "Erase";
+			}, 2000);
+			document.getElementById("cancellaButton").textContent = "Erased!";
+			semplificaCodiceButton.disabled = true; // Disabilita il pulsante "Simplify Code"
+			copiaButton.disabled = true; // Disabilita il pulsante "Copy"
+			});
+		</script>
+		<script>
+			// Seleziona l'elemento dell'immagine per ID
+			const image = document.getElementById("Logo");
+	
+			// Aggiungi un gestore di eventi al clic sull'immagine
+			image.addEventListener("click", function() {
+			// Ottieni l'URL dal link
+			const linkURL = this.getAttribute("data-url");
+
+			// Crea un elemento textarea nascosto per copiare il testo negli appunti
+			const textArea = document.createElement("textarea");
+			textArea.value = linkURL;
+			document.body.appendChild(textArea);
+
+			// Seleziona e copia il testo nell'area di testo
+			textArea.select();
+			document.execCommand("copy");
+
+			// Rimuovi l'area di testo dal DOM
+			document.body.removeChild(textArea);
+
+			// Alert o messaggio di conferma
+			const confirmationGif = document.getElementById("confirmationGif");
+			confirmationGif.style.display = "block";
+			setTimeout(function() {
+				confirmationGif.style.display = "none";
+			}, 4500); 
+		});
+		</script><!--
+	--><img id="confirmationGif" src="https://lastrevenge.ddns.net/test/SPLD-SQL-Code/FA.gif?v=<?php echo time(); ?>" alt="Copied" style="display: none;"><!--
+	--><p id="copyright">© 2023 ⭐️⭐️⭐️ SQL Code -> Simplified ⭐️⭐️⭐️ All Rights Reserved.<!--
+--><br><!--
+		--><a class="fire-text" href="mailto:il.ghost.rider8@gmail.com" target="_blank"><!--
+			-->il.ghost.rider8@gmail.com<!--
+		--></a> Powered by 🔥<!--
+		--><a class="fire-text" href="https://github.com/The-GhostRider" target="_blank"><!--
+			-->The GhostRider<!--
+		--></a>🔥<!--
+	--></p><!--
+--></body>
+</html>
