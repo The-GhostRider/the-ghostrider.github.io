@@ -27,8 +27,22 @@
 		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/">
 		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/index.html">
 		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css?v=<?php echo time(); ?>">
+		<link rel="stylesheet" href="{{ site.baseurl }}/CSS-ZooLive/ZooLive.css">
 		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js?v=<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="https://codicebusiness.shinystat.com/dcode/dcode.min.js?v=<?php echo time(); ?>"></script>
+		<script>
+		if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/ZooLive/js/sw.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+			});
+		});
+		}
+		</script>
 		<script>
 			const ua = encodeURIComponent(navigator.userAgent).replace(/%20/g,'+');
 			const xhr = new XMLHttpRequest();
