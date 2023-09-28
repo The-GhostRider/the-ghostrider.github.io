@@ -245,6 +245,8 @@
 		position: fixed;
 		padding: 0%;
 		font-size: 226%;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));	
 	}
 
 	/* Nasconde i controlli quando il video non è in hover */
@@ -278,10 +280,10 @@
 	}
 
 	.tip-content_1 {
-		top: 76%;
-		left: 156%;
+		top: 46.7%;
+		left: 85%;
 		right: -93%;
-		width: 50%;
+		width: 27%;
 		height: auto;
 		background-color: #010409;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.8), rgba(238, 63, 87, 0.6), rgba(230, 0, 126, 0.4));
@@ -289,8 +291,8 @@
 		transition: transform 0.5s, box-shadow 0.5s;
 		color: rgb(255 255 255);
 		display: none;
-		scale: 100%;
-		position: absolute;
+		scale: 79%;
+		position: fixed;
 		font-size: 14px;
 		line-height: 135%;
 		text-align: left;
@@ -344,12 +346,12 @@
 	}
 
 	#Tip_1 {
-		top: 31%;
-		left: 153%;
+		top: 29%;
+		left: 84%;
 		display: flex;
 		scale: 200%;
 		color: #00A46D;
-		position: absolute;
+		position: fixed;
 		border: 1px solid;
 		border-color: #ccc;
 		flex-direction: row;
@@ -424,13 +426,13 @@
 	}
 
 	.spoiler {
-		top: 40%;
-		left: 141.2%;
-		width: 29%;
+		top: 36%;
+		left: 77%;
+		width: 17%;
 		background-color: #010409;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.8), rgba(238, 63, 87, 0.6), rgba(230, 0, 126, 0.4));
 		color: rgb(255 255 255);
-		position: absolute;
+		position: fixed;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -455,7 +457,6 @@
 	.spoiler-content {
 		left: 49%;
 		top: 153%;
-		margin-left: 0%;
 		width: 72%;
 		height: 125%;
 		display: none;
@@ -503,7 +504,7 @@
 		line-height: 186%;
 		border: 2px solid;
 		border-radius: 20px;
-		border-color: #79c0ff;
+		border-color: #2b5983;
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		z-index: 3;
