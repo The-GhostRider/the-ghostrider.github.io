@@ -5,6 +5,7 @@ self.addEventListener('install', event => {
       return cache.addAll([
         '/ZooLive/index.html',
         '/ZooLive/CSS-ZooLive/ZooLive.css',
+        'https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd',
         // aggiungi qui altri file statici
       ]);
     })
