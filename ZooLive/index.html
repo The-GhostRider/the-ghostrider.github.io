@@ -256,7 +256,7 @@
 			<div id="video-wrapper">
 				<div id="bitrateClock">Bitrate: <span id="bitrateValue">0 kbps</span></div>
 				<video id="mediaset-player" controls>
-					<source src="https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd" type="application/dash+xml"/>
+					<source src="https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd?v=<?php echo time(); ?>" type="application/dash+xml"/>
 				</video>
 			</div>
 			<div id="time-controls">
@@ -342,7 +342,7 @@
 			});
 		</script>
 		<script>
-			fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
+			fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd?v=<?php echo time(); ?>')
 			.then(response => response.text())
 			.then(manifest => {
 				let parser = new DOMParser();
