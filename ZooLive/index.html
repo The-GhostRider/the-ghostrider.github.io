@@ -13,7 +13,7 @@
 		<meta http-equiv="Expires" content="0">
 		<meta property="og:title" content="⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️">
 		<meta name="description" content="Player: Zoo Live">
-		<meta property="og:image" content="./img/ZooManifest.png?v=<?php echo time(); ?>">
+		<meta property="og:image" content="./img/ZooManifest.png">
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:description" content="Player: Zoo Live">
 		<meta name="generator" content="Powered by 🔥The GhostRider🔥 Page Builder.">
@@ -26,9 +26,9 @@
 		<link rel="alternate" href="https://the-ghostrider.github.io/ZooLive/index.html" hreflang="x-default">
 		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/">
 		<link rel="canonical" href="https://the-ghostrider.github.io/ZooLive/index.html">
-		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css?v=<?php echo time(); ?>">
-		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js?v=<?php echo time(); ?>"></script>
-		<script type="text/javascript" src="https://codicebusiness.shinystat.com/dcode/dcode.min.js?v=<?php echo time(); ?>"></script>
+		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css">
+		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+		<script type="text/javascript" src="https://codicebusiness.shinystat.com/dcode/dcode.min.js"></script>
 		<script>
 		if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function() {
@@ -257,10 +257,10 @@
 			</div>
 		</div>
 		<div class="LogoCont">
-			<img id="Logo105" src="./img/LogoZoo105.png?v=<?php echo time(); ?>" alt="LogoZoo105"></img>
+			<img id="Logo105" src="./img/LogoZoo105.png" alt="LogoZoo105"></img>
 		</div>
 		<div id="image-container">
-			<image id="ZooGifs" src="./img/Zoo1.gif?v=<?php echo time(); ?>" alt="ZooGifs"></image>
+			<image id="ZooGifs" src="./img/Zoo1.gif" alt="ZooGifs"></image>
 		</div>
 		<div id="Global">
 			<div id="recording-timer">
@@ -269,7 +269,7 @@
 			<div id="video-wrapper">
 				<div id="bitrateClock">Bitrate: <span id="bitrateValue">0 kbps</span></div>
 				<video id="mediaset-player" controls>
-					<source src="https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd?v=<?php echo time(); ?>" type="application/dash+xml"/>
+					<source src="https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd" type="application/dash+xml"/>
 				</video>
 			</div>
 			<div id="time-controls">
@@ -355,7 +355,7 @@
 			});
 		</script>
 		<script>
-			fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd?v=<?php echo time(); ?>')
+			fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
 			.then(response => response.text())
 			.then(manifest => {
 				let parser = new DOMParser();
@@ -560,13 +560,13 @@
 			function getRandomImagePath() {
 				// Array di percorsi delle immagini disponibili.
 				const imagePaths = [
-					'./img/Zoo1.gif?v=<?php echo time(); ?>',
-					'./img/Zoo2.gif?v=<?php echo time(); ?>',
-					'./img/Zoo3.gif?v=<?php echo time(); ?>',
-					'./img/Zoo4.gif?v=<?php echo time(); ?>',
-					'./img/Zoo5.gif?v=<?php echo time(); ?>',
-					'./img/Zoo6.gif?v=<?php echo time(); ?>',
-					'./img/Zoo7.gif?v=<?php echo time(); ?>',
+					'./img/Zoo1.gif',
+					'./img/Zoo2.gif',
+					'./img/Zoo3.gif',
+					'./img/Zoo4.gif',
+					'./img/Zoo5.gif',
+					'./img/Zoo6.gif',
+					'./img/Zoo7.gif',
 				];
 		
 				// Scegli casualmente un percorso dall'array
