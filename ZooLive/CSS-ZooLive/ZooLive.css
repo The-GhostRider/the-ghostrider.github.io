@@ -5,8 +5,8 @@
 		font-size: 22px;
 		color: #010409;
 		size: 1920px 1080px;
-		margin: 1mm 1mm 1mm 1mm;
-		margin-bottom: 35%;
+		margin: 0mm 0mm 0mm 0mm;
+		margin-bottom: 37%;
 		font-family: "Cooper Black", sans-serif;
 		background-size: 143% 143%;
 		background-image: 
@@ -42,13 +42,11 @@
 	#image-container {
 		top: 0.1%;
 		margin-left: -0.7%;
-		bottom: 10%;
 		display: inline-flex;
 		position: absolute;
 		width: 99.6%;
 		height: 99.2%;
 		overflow: hidden;
-		padding: 0%;
 		border: 3px solid;
 		border-radius: 38px;
 		border-color: #2b5983;
@@ -71,12 +69,10 @@
 	}
 	
 	#Global {
-		margin: 0% 0% 0% 0%;
 		top: 4%;
 		left: 1%;
 		scale: 90%;
-		display: block;
-		position: absolute;
+		position: fixed;
 	}
 
 	#recording-timer {
@@ -242,7 +238,15 @@
 		justify-content: space-between;
 		align-content: space-between;
 	}
-	
+
+	#fullScreenButton {
+		margin-top: -14%;
+		margin-left: 109%;
+		position: fixed;
+		padding: 0%;
+		font-size: 226%;
+	}
+
 	/* Nasconde i controlli quando il video non è in hover */
 	#video-wrapper:not(:hover) #mediaset-player::-webkit-media-controls {
 		opacity: 0;
@@ -374,22 +378,20 @@
 	}
 
 	#copyright {
-		top: 126%;
-		margin-left: 68%;
-		margin-right: 36%;
-		width: 43%;
+		bottom: 0%;
+		left: 38%;
+		width: 24%;
 		height: auto;
 		background-color: rgba(1,4,9, 0.5);
 		color: #fcb111;
 		font-size: 13px;
 		text-align: center;
-		position: absolute;
+		position: fixed;
 		padding: 6px;
 		border: 1px solid;
 		border-radius: 15px;
 		border-color: #2b5983;
 		box-shadow: -1px -2px 10px 2px rgba(255,255,255, 0.9);
-		transition: transform 1s, box-shadow 1s;
 		z-index: 3;
 	}
 
@@ -599,7 +601,7 @@
 		width: auto;
 		height: auto;
 		scale: 100%;
-		position: absolute;
+		position: fixed;
 		border-radius: 13px;
 		z-index: 1;
 	}
@@ -733,10 +735,10 @@
 	#Logo105 {
 		background-color: #ffffff;
 		background-image: linear-gradient(rgba(230, 0, 126, 0.9), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
-		top: 15%;
-		left: 133%;
+		top: 3%;
+		left: 39%;
 		scale: 159%;
-		position: absolute;
+		position: fixed;
 		padding: 12px;
 		border: 3px solid;
 		border-radius: 38px;
@@ -784,12 +786,12 @@
 	}
 	
 	#Global {
-		margin: 0% 0% 0% 0%;
-		top: 12%;
-		left: 8%;
+		top: 0%;
+		left: 1%;
+		width: 26%;
+		height: auto;
 		scale: 100%;
-		display: block;
-		position: absolute;
+		position: fixed;
 	}
 
 	#recording-timer {
@@ -853,21 +855,19 @@
 	}
 	
 	#bitrateClock {
-		top: 110%;
+		top: 108.9%;
 		left: 170%;
 		scale: 240%;
 		width: 36%;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
 		font-size: 27px;
 		font-family: "Cooper Black", sans-serif;
-		display: inline-block;
-		position: absolute;
+		position: fixed;
 		padding: 10px;
 		border: 3px solid;
 		border-radius: 10px;
 		border-color: #2b5983;
 		box-shadow: -1px -1px 3px 1px rgba(255,255,255, 0.9);
-		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
 	}
 
@@ -922,15 +922,15 @@
 	}
 	
 	#playButton {
-		margin-top: 80%;
-		margin-left: 157%;
-		position: absolute;
+		top: 130%;
+		left: 20%;
+		position: fixed;
 	}
 
 	#stopButton {
-		margin-top: 80%;
-		margin-left: 294%;
-		position: absolute;
+		top: 130%;
+		left: 210%;
+		position: fixed;
 	}
 
 	#recButton {
@@ -946,16 +946,29 @@
 		visibility: hidden;
 	}
 
+	#fullScreenButton {
+		top: 135%;
+		left: 120%;
+		width: 15%;
+		height: 6.5%;
+		position: fixed;
+		padding: 0%;
+		font-size: 226%;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));	
+		transition: transform 0.5s, box-shadow 0.5s;
+	}
+
 	#backward-2-min {
 		top: 105%;
 		left: -32%;
-		position: absolute;
+		position: fixed;
 	}
 
 	#forward-2-min {
 		top: 105%;
 		left: 257%;
-		position: absolute;
+		position: fixed;
 	}
 
 	/* Nascondi i controlli quando il video non è in hover */
@@ -970,16 +983,16 @@
 	}
 
 	#copyright {
-		top: 222%;
-		left: 135%;
+		top: 94.4%;
+		left: 37%;
 		height: auto;
-		width: 106%;
-		scale: 200%;
+		width: 25%;
+		scale: 225%;
 		background-color: rgba(1,4,9, 0.5);
 		color: #fcb111;
 		font-size: 13px;
 		text-align: center;
-		position: absolute;
+		position: fixed;
 		padding: 10px;
 		border: 1px solid;
 		border-radius: 15px;
@@ -1354,14 +1367,14 @@
 	}
 	
 	#Zoo_Radio {
-		top: 288.53%;
-		left: 127%;
-		width: 104.6%;
+		top: 80%;
+		left: 33.1%;
+		width: 30%;
 		height: auto;
 		scale: 176%;
 		background-color: transparent;
 		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
-		position: absolute;
+		position: fixed;
 		border-radius: 13px;
 		padding: 12px;
 		border: 3px solid;
@@ -1498,14 +1511,14 @@
 	}
 
 #Fascia {
-	top: 240%;
-    left: 91%;
+	top: 71%;
+    left: 25%;
     scale: 190%;
-	width: 175%;
+	width: 48%;
     font-size: 20px;
     background-color: transparent;
     background-image: linear-gradient(rgba(230, 0, 126, 0.9), rgba(1,33,77, 0.9), rgba(252, 177, 17, 0.9));
-    position: absolute;
+    position: fixed;
     border: 0px solid;
     border-radius: 46px;
     padding: 16px;

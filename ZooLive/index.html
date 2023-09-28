@@ -212,9 +212,6 @@
 			<script type="text/javascript"
 				src="//codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-43352069-76b6b">
 			</script>
-			<a href="https://www.shinystat.com/it/" target="_top">
-			<img src="//www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-43352069-76b6b" alt="Statistiche accessi" style="border:0px" />
-			</a>
 		</div>
 	<!-- Fine Codice ShinyStat -->
 		<div id="geoInfo_1">
@@ -270,8 +267,10 @@
 				<button id="playButton">▶️ Play</button>
 				<button id="stopButton">⏹ Stop</button>
 				<button id="recButton">🔴 ▶️ Rec/AutoPlay</button>
+				<button id="fullScreenButton">💢</button>
 				<br>
 			</div>
+		</div>
 			<span id="Tip_1" class="tip-icon">
 				ℹ️
 			</span>
@@ -309,8 +308,17 @@
 					--></pre>
 					</div>
 				</div>
-			</div>
-		<script>
+			</div><!--
+	--><p id="copyright">© 2023 ⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️ All Rights Reserved.<!--
+--><br><!--
+		--><a class="fire-text" href="mailto:il.ghost.rider8@gmail.com" target="_blank"><!--
+			-->il.ghost.rider8@gmail.com<!--
+		--></a> Powered by 🔥<!--
+		--><a class="fire-text" href="https://github.com/The-GhostRider" target="_blank"><!--
+			-->The GhostRider<!--
+		--></a>🔥<!--
+	--></p><!--
+	--><script>
 			document.addEventListener('DOMContentLoaded', (event) => {
 				const videoPlayer = document.getElementById('mediaset-player');
 				const backward2MinButton = document.getElementById('backward-2-min');
@@ -520,6 +528,22 @@
 			});
 		</script>
 		<script>
+			// Recupera il riferimento all'elemento video e al pulsante Fullscreen utilizzando const e let
+			const video = document.getElementById("mediaset-player");
+			const fullScreenButton = document.getElementById("fullScreenButton");
+		
+			// Aggiungi un gestore di eventi al pulsante Fullscreen
+			fullScreenButton.addEventListener("click", () => {
+				if (video.requestFullscreen) {
+					video.requestFullscreen();
+				} else if (video.mozRequestFullScreen) { // Firefox
+					video.mozRequestFullScreen();
+				} else if (video.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+					video.webkitRequestFullscreen();
+				}
+			});
+		</script>
+		<script>
 			function getRandomImagePath() {
 				// Array di percorsi delle immagini disponibili.
 				const imagePaths = [
@@ -610,15 +634,6 @@
 		
 			// Crea nuove immagini periodicamente.
 			setInterval(createRandomImage, 5000); // Crea una nuova immagine ogni 5 secondi.
-		</script>
-		<p id="copyright">© 2023 ⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️ All Rights Reserved.<!--
---><br><!--
-		--><a class="fire-text" href="mailto:il.ghost.rider8@gmail.com" target="_blank"><!--
-			-->il.ghost.rider8@gmail.com<!--
-		--></a> Powered by 🔥<!--
-		--><a class="fire-text" href="https://github.com/The-GhostRider" target="_blank"><!--
-			-->The GhostRider<!--
-		--></a>🔥<!--
-	--></p>
-	</body>
-</html>
+		</script><!--
+	--></body><!--
+--></html><!--
