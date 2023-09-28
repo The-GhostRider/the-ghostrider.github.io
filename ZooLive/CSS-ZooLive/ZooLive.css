@@ -249,7 +249,7 @@
 		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));	
 	}
 
-	/* Nasconde i controlli quando il video non è in hover */
+	/* Nasconde i controlli quando il video non è in hover. */
 	#video-wrapper:not(:hover) #mediaset-player::-webkit-media-controls {
 		opacity: 0;
 		transition: opacity 0.3s;
