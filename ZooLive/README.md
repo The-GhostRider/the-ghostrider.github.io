@@ -1,4 +1,8 @@
-#ITA<br>
+```css
+#######
+# ITA #
+#######
+```
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#<br>
        <h2>DISCLAIMER: SCOPO DIDATTICO E DI PROGETTAZIONE</h2>
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
@@ -19,7 +23,11 @@ L'uso di questo progetto implica l'accettazione dei termini e delle condizioni s
 <br>
 <br>
 <br>
-#EN<br>
+```css
+########
+#  EN  #
+########
+```
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#<br>
        <h2>DISCLAIMER: EDUCATIONAL AND DESIGN PURPOSES</h2>
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
@@ -29,7 +37,7 @@ L'uso di questo progetto implica l'accettazione dei termini e delle condizioni s
 This project has been created for educational and design purposes. We do not promote, endorse, or encourage any copyright infringement or improper use of copyrighted content.
 
 The use of this website and its features is at your own risk. The authors and creators of this project are not responsible for any legal consequences or damages resulting from the improper use of information, multimedia content, or features provided by this project.
-This project is exclusively for educational (and illustrative) purposes, and I have chosen ```the Zoo``` as the theme as a fan of this radio program.
+This project is exclusively for educational (and illustrative) purposes, and I have chosen ```The Zoo``` as the theme as a fan of this radio program.
 
 This project may include hyperlinks to external websites or third-party resources. We have no control over such websites or resources and are not responsible for their content or privacy practices. Accessing external websites through hyperlinks is at your discretion and risk.
 
