@@ -30,19 +30,6 @@
 		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 		<script type="text/javascript" src="https://codicebusiness.shinystat.com/dcode/dcode.min.js"></script>
 		<script>
-		if ('serviceWorker' in navigator) {
-		window.addEventListener('load', function() {
-			navigator.serviceWorker.register('/ZooLive/js/sw.js').then(function(registration) {
-			// Registration was successful
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-			}, function(err) {
-			// registration failed :(
-			console.log('ServiceWorker registration failed: ', err);
-			});
-		});
-		}
-		</script>
-		<script>
 			const ua = encodeURIComponent(navigator.userAgent).replace(/%20/g,'+');
 			const xhr = new XMLHttpRequest();
 				xhr.open('GET', 'https://livetrafficfeed.com/static/v2/user-agent?ua=USERAGENT&key=dou5hdkJiiiSRvQ9R5UklsbvR4JAEYER', false);
