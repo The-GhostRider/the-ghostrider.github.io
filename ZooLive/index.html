@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta property="og:type" content="website">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=0.2">
 		<meta property="og:url" content="https://the-ghostrider.github.io/ZooLive/">
 		<meta property="og:url" content="https://the-ghostrider.github.io/ZooLive/index.html">
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -29,6 +29,19 @@
 		<link rel="stylesheet" type="text/css" href="./CSS-ZooLive/ZooLive.css">
 		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 		<script type="text/javascript" src="https://codicebusiness.shinystat.com/dcode/dcode.min.js"></script>
+		<script>
+		if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/ZooLive/js/sw.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+			});
+		});
+		}
+		</script>
 		<script>
 			const ua = encodeURIComponent(navigator.userAgent).replace(/%20/g,'+');
 			const xhr = new XMLHttpRequest();
@@ -199,7 +212,6 @@
 		</script>
 	</head>
 	<body>
-		<h1 id="Fascia"><b class="fire-text">Diretta Live ogni Giorno <u>dal Lunedì al Venerdì, dalle 14:00 alle 16:00 (Ora Italiana)</u></b></h1>
 		<div id="Zoo_Radio">
 			<a href="javascript:"><img id="Zoo_Radio_IMG" alt="Zoo Radio" title="Zoo Radio" data-original="https://zoo.105.net/resizer/380/380/true/Webradio-105-zoo-1632236075367.png--.png?1632236075450" width="180" height="180" src="https://zoo.105.net/resizer/380/380/true/Webradio-105-zoo-1632236075367.png--.png?1632236075450" style="display: inline;">
 			<audio controls id="Zoo_Radio_Audio">
@@ -250,6 +262,7 @@
 			<image id="ZooGifs" src="./img/Zoo1.gif" alt="ZooGifs"></image>
 		</div>
 		<div id="Global">
+			<h1 id="Fascia"><b class="fire-text">Diretta Live ogni Giorno <u>dal Lunedì al Venerdì, dalle 14:00 alle 16:00 (Ora Italiana)</u></b></h1>
 			<div id="recording-timer">
 				<span>Tempo di registrazione: <span id="recording-time">0:0:00</span></span>
 			</div>
@@ -269,8 +282,17 @@
 				<button id="recButton">🔴 ▶️ Rec/AutoPlay</button>
 				<button id="fullScreenButton">💢</button>
 				<br>
-			</div>
-		</div>
+			</div><!--
+	--><p id="copyright">© 2023 ⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️ All Rights Reserved.<!--
+--><br><!--
+		--><a class="fire-text" href="mailto:il.ghost.rider8@gmail.com" target="_blank"><!--
+			-->il.ghost.rider8@gmail.com<!--
+		--></a> Powered by 🔥<!--
+		--><a class="fire-text" href="https://github.com/The-GhostRider" target="_blank"><!--
+			-->The GhostRider<!--
+		--></a>🔥<!--
+	--></p><!--
+	--></div>
 			<span id="Tip_1" class="tip-icon">
 				ℹ️
 			</span>
@@ -309,15 +331,6 @@
 					</div>
 				</div>
 			</div><!--
-	--><p id="copyright">© 2023 ⭐️⭐️⭐️ Player: Zoo Live ⭐️⭐️⭐️ All Rights Reserved.<!--
---><br><!--
-		--><a class="fire-text" href="mailto:il.ghost.rider8@gmail.com" target="_blank"><!--
-			-->il.ghost.rider8@gmail.com<!--
-		--></a> Powered by 🔥<!--
-		--><a class="fire-text" href="https://github.com/The-GhostRider" target="_blank"><!--
-			-->The GhostRider<!--
-		--></a>🔥<!--
-	--></p><!--
 	--><script>
 			document.addEventListener('DOMContentLoaded', (event) => {
 				const videoPlayer = document.getElementById('mediaset-player');
