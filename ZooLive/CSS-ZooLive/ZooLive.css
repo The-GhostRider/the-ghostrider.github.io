@@ -40,7 +40,7 @@
 	
 	#image-container {
 		top: 0.1%;
-		margin-left: -0.7%;
+		margin-left: -0.5%;
 		display: inline-flex;
 		position: absolute;
 		width: 99.6%;
@@ -68,9 +68,9 @@
 	}
 	
 	#Global {
-		top: 4%;
-		left: 1%;
-		scale: 90%;
+		top: 1%;
+		left: -2%;
+		scale: 81%;
 		position: fixed;
 	}
 
@@ -306,7 +306,7 @@
 	}
 
 	.tip-content_2 {
-		top: 52%;
+		top: 42%;
 		left: 79%;
 		width: 39%;
 		height: 28%;
@@ -316,7 +316,7 @@
 		transition: transform 0.5s, box-shadow 0.5s;
 		color: rgb(255 255 255);
 		display: none;
-		scale: 70%;
+		scale: 56%;
 		position: absolute;
 		font-size: 14px;
 		line-height: 135%;
@@ -362,8 +362,8 @@
 	}
 
 	#Tip_2 {
-		top: 95.3%;
-		left: 96.7%;
+		top: 94.9%;
+		left: 96.2%;
 		display: flex;
 		scale: 200%;
 		color: #00A46D;
@@ -379,9 +379,9 @@
 	}
 
 	#copyright {
-		top: 126%;
-		left: 67%;
-		width: 38%;
+		top: 92%;
+		left: 37%;
+		width: 24%;
 		height: auto;
 		background-color: rgba(1,4,9, 0.5);
 		color: #fcb111;
@@ -544,12 +544,12 @@
 	}
 
 	#geoInfo_1 {
-		top: 64%;
-		left: 74.3%;
+		top: 52%;
+		left: 76%;
 		padding: 0px;
-		width: auto;
+		width: 26%;
 		height: auto;
-		scale: 120%;
+		scale: 105%;
 		position: absolute;
 		opacity: 0;
 		transition: opacity 1s, transform 1s, box-shadow 1s;
@@ -979,10 +979,10 @@
 	}
 
 	#copyright {
-		top: 240%;
-		left: 40%;
-		height: 12%;
-		width: 286%;
+		top: 91%;
+		left: 13%;
+		height: auto;
+		width: 70%;
 		scale: 100%;
 		background-color: rgba(1,4,9, 0.5);
 		color: #fcb111;
