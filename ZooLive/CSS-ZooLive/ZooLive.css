@@ -1,5 +1,21 @@
 @media (max-width: 4000px) {
 	/* Stili per PC, tablet, ecc. */
+	#boob {
+		top: 4.3%;
+		margin-left: 79.05%;
+		scale: 93%;
+		position: fixed;
+		z-index: 5;
+	}
+
+	#Ver {
+		top: 2.4%;
+		margin-left: 95.4%;
+		scale: 90%;
+		position: fixed;
+		z-index: 5;
+	}
+
 	body {
 		font-size: 22px;
 		color: #010409;
