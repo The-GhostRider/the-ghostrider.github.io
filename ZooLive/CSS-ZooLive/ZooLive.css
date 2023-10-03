@@ -734,6 +734,22 @@
 /* ############################################################################################################################# */
 @media only screen and (min-width: 432px) and (orientation: portrait) {
 	/* Stili specifici per gli smartphone */
+	#boob {
+		top: 2.6%;
+		margin-left: 35.1%;
+		scale: 166%;
+		position: fixed;
+		z-index: 5;
+	}
+
+	#Ver {
+		top: 0.5%;
+		margin-left: 64%;
+		scale: 150%;
+		position: fixed;
+		z-index: 5;
+	}
+
 	body {
 		font-size: 12px;
 		size: 432px 768px;
