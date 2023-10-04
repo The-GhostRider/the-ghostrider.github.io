@@ -1,5 +1,21 @@
 @media (max-width: 4000px) {
 	/* Stili per PC, tablet, ecc. */
+	#Team {
+		top: 38%;
+		left: 53%;
+		scale: 103%;
+		position: absolute;
+		padding: 12px;
+		opacity: 70%;
+		transition: transform 1s, box-shadow 1s;
+		z-index: 1;
+	}
+
+	#Team:hover {
+		opacity: 100%;
+		z-index: 1;
+	}
+
 	#boob {
 		top: 4.3%;
 		margin-left: 79.05%;
@@ -72,7 +88,8 @@
 		align-items: center;
 		justify-items: center;
 		justify-content: space-between;
-		gap: 0px;
+		row-gap: 0%;
+		column-gap: 0%;
 		flex-wrap: wrap;
 		align-content: space-between;
 	}
@@ -81,6 +98,8 @@
 		position: absolute;
 		width: 0%;
 		height: auto;
+		opacity: 0%;
+		z-index: 0;
 	}
 	
 	#Global {
@@ -295,7 +314,7 @@
 	}
 
 	.tip-content_1 {
-		top: 46.7%;
+		top: 38.7%;
 		left: 85%;
 		right: -93%;
 		width: 27%;
@@ -306,7 +325,7 @@
 		transition: transform 0.5s, box-shadow 0.5s;
 		color: rgb(255 255 255);
 		display: none;
-		scale: 79%;
+		scale: 66.5%;
 		position: fixed;
 		font-size: 14px;
 		line-height: 135%;
@@ -361,10 +380,10 @@
 	}
 
 	#Tip_1 {
-		top: 29%;
+		top: 28%;
 		left: 84%;
 		display: flex;
-		scale: 200%;
+		scale: 126%;
 		color: #00A46D;
 		position: fixed;
 		border: 1px solid;
@@ -441,7 +460,7 @@
 	}
 
 	.spoiler {
-		top: 36%;
+		top: 32%;
 		left: 77%;
 		width: 17%;
 		background-color: #010409;
@@ -455,7 +474,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		text-align: left;
-		scale: 150%;
+		scale: 107%;
 		font-size: 11px;
 		font-weight: bold;
 		padding: 5px;
@@ -734,6 +753,17 @@
 /* ############################################################################################################################# */
 @media only screen and (min-width: 432px) and (orientation: portrait) {
 	/* Stili specifici per gli smartphone */
+	#Team {
+		top: 70%;
+		left: 28%;
+		scale: 200%;
+		position: fixed;
+		padding: 12px;
+		opacity: 100%;
+		transition: transform 1s, box-shadow 1s;
+		z-index: -1;
+	}
+
 	#boob {
 		top: 2.6%;
 		margin-left: 35.1%;
@@ -1547,13 +1577,11 @@
 		font-size: 25px;
 		background-color: transparent;
 		background-image: linear-gradient(rgba(230, 0, 126, 0.9), rgba(1,33,77, 0.9), rgba(252, 177, 17, 0.9));
-		position: fixed;
-		border: 0px solid;
+		position: absolute;
 		border-radius: 46px;
 		padding: 16px;
 		box-shadow: -1px -2px 10px 2px rgb(255 255 255);
-		transition: transform 1s, box-shadow 1s;
 		transform: rotate(5deg);
-		z-index: 2;
+		z-index: 93;
 	}
 }

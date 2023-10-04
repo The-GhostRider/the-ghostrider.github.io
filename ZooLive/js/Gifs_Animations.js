@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   shuffleArray(imagePaths);
 
   const imageContainer = document.getElementById('image-container');
-  const maxImages = 12; // Numero massimo di immagini da visualizzare contemporaneamente.
+  const maxImages = 13; // Numero massimo di immagini da visualizzare contemporaneamente.
 
   function createRandomImage() {
     if (imageContainer.children.length >= maxImages) {
@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Imposta le dimensioni dell'immagine.
     image.width = 360;
+
+	// Imposta il bordo arrotondato al 5%.
+	image.style.borderRadius = '20%';
 
     image.onload = function () {
       const maxX = document.documentElement.clientWidth - this.width;
