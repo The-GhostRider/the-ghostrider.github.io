@@ -1,0 +1,14 @@
+#AD {
+	background-color:#FFFFFF;
+	color:#F00000;
+	padding:5px;
+	border-radius: 10px;
+	position: relative;
+	z-index: 3;
+	font-size:50px;
+	}
+
+body {
+	font-family: "Georgia", "Georgia", monospace;
+	background-color:#000000;
+	}
