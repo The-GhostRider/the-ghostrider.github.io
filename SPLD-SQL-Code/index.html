@@ -30,7 +30,6 @@
 		<script type="text/javascript" src="./js/Pulsanti.js?v=<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="./js/Logo.js?v=<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="./js/semplificaCodice.js?v=<?php echo time(); ?>"></script>
-		<script type="text/javascript" src="./js/semplificaIlCodiceQui_DELETE_UPDATE.js?v=<?php echo time(); ?>"></script>
 		<script> hljs.highlightAll(); </script>
 	</head>
 	<body class="elemento-auto-resize">
@@ -48,7 +47,7 @@
 		<div id="Spoilers" class="spoilers-container">
 			<div class="spoiler" onclick="toggleSpoiler(0)">
 				<span id="Tip1" class="tip-icon">
-					?
+					ℹ️
 				</span>
 					<span class="tip-content"><!--
 					-->Example of a Query that will work correctly.<!--
@@ -68,11 +67,11 @@
 				</div>
 			</div>
 			<div class="spoiler" onclick="toggleSpoiler(1)">
-				<span id="Tip2" class="tip-icon">
-					!
+				<span id="Tip1" class="tip-icon">
+					ℹ️
 				</span>
 				<span class="tip-content"><!--
-				-->[To-Fix Soon]: Currently, Function not working properly.<!--
+				-->Example of a Query that will work correctly.<!--
 			--></span>&nbsp;&nbsp;Show CODE: INSERT INTO<!--
 			--><div id="spoilerContent1" class="spoiler-content">
 				<button id="copiaBTest1" onclick="copiaContenuto('Test1', 'copiaBTest1')"><!--
@@ -92,7 +91,7 @@
 			</div>
 			<div class="spoiler" onclick="toggleSpoiler(2)">
 				<span id="Tip1" class="tip-icon">
-					?
+					ℹ️
 				</span>
 				<span class="tip-content"><!--
 				-->Example of a Query that will work correctly.<!--
@@ -144,7 +143,7 @@
 --><br><!--
 --><br><!--
 		--><span id="Tip1" class="tip-icon"><!--
-			-->?<!--
+			-->ℹ️<!--
 		--></span><!--
 		--><span class="tip-content"><!--
 			-->This parameter is essential because it determines which ID will be grouped for Query simplification.<br><!--
@@ -154,42 +153,48 @@
 				<option class="custom-select" value="chiave0">
 				</option>
 				<option class="custom-option" value="chiave1">
-					INSERT INTO                      
-				</option>                            
+					INSERT INTO
+				</option>
 				<option class="custom-select" value="chiave2">
-					SourceEntry                      
-				</option>                            
+					SourceEntry
+				</option>
 				<option class="custom-select" value="chiave3">
-					Entry                            
-				</option>                            
+					Entry
+				</option>
 				<option class="custom-select" value="chiave4">
-					entry                            
-				</option>                            
+					entry
+				</option>
 				<option class="custom-select" value="chiave5">
-					ID                               
-				</option>                            
+					ID
+				</option>
 				<option class="custom-select" value="chiave6">
-					id                               
-				</option>                            
+					id
+				</option>
 				<option class="custom-select" value="chiave7">
-					guid                             
-				</option>                            
+					guid
+				</option>
 				<option class="custom-select" value="chiave8">
-					CreatureID                       
-				</option>                            
+					CreatureID
+				</option>
 				<option class="custom-select" value="chiave9">
 					DisplayID
 				</option>
 				<option class="custom-select" value="chiave10">
-					CreatureEntry                    
-				</option>                            
+					CreatureEntry
+				</option>
 				<option class="custom-select" value="chiave11">
-					eventEntry                       
-				</option>                            
+					eventEntry
+				</option>
 				<option class="custom-select" value="chiave12">
 					entryorguid
 				</option>
 				<option class="custom-select" value="chiave13">
+					minlevel
+				</option>
+				<option class="custom-select" value="chiave14">
+					maxlevel
+				</option>
+				<option class="custom-select" value="chiave15">
 					source_type
 				</option>
 			</select>
@@ -205,43 +210,49 @@
 			<select id="chiavePrimaria1" onchange="abilitaPulsante()" disabled>
 				<option class="custom-select" value="chiave0">
 				</option>
-				<option class="custom-select" value="chiave1">
-					INSERT INTO                      
-			</option>                            
+				<option class="custom-option" value="chiave1">
+					INSERT INTO
+				</option>
 				<option class="custom-select" value="chiave2">
-					SourceEntry                      
-				</option>                            
+					SourceEntry
+				</option>
 				<option class="custom-select" value="chiave3">
-					Entry                            
-				</option>                            
+					Entry
+				</option>
 				<option class="custom-select" value="chiave4">
-					entry                            
-				</option>                            
+					entry
+				</option>
 				<option class="custom-select" value="chiave5">
-					ID                               
-				</option>                            
+					ID
+				</option>
 				<option class="custom-select" value="chiave6">
-					id                               
-				</option>                            
+					id
+				</option>
 				<option class="custom-select" value="chiave7">
-					guid                             
-				</option>                            
+					guid
+				</option>
 				<option class="custom-select" value="chiave8">
-					CreatureID                       
-				</option>                            
+					CreatureID
+				</option>
 				<option class="custom-select" value="chiave9">
 					DisplayID
 				</option>
 				<option class="custom-select" value="chiave10">
-					CreatureEntry                    
-				</option>                            
+					CreatureEntry
+				</option>
 				<option class="custom-select" value="chiave11">
-					eventEntry                       
-				</option>                            
+					eventEntry
+				</option>
 				<option class="custom-select" value="chiave12">
 					entryorguid
 				</option>
 				<option class="custom-select" value="chiave13">
+					minlevel
+				</option>
+				<option class="custom-select" value="chiave14">
+					maxlevel
+				</option>
+				<option class="custom-select" value="chiave15">
 					source_type
 				</option>
 			</select><!--
