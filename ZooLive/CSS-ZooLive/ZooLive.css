@@ -16,14 +16,6 @@
 		z-index: 1;
 	}
 
-	#boob {
-		top: 4.3%;
-		margin-left: 79.05%;
-		scale: 93%;
-		position: fixed;
-		z-index: 5;
-	}
-
 	#Ver {
 		top: 2.4%;
 		margin-left: 95.4%;
@@ -596,19 +588,8 @@
 		transition: opacity 1s, transform 1s, box-shadow 1s;
 		z-index: 1;
 	}
-	
+
 	#geoInfo_2 {
-		margin-top: -5%;
-		margin-left: -15.1%;
-		width: auto;
-		height: auto;
-		scale: 143%;
-		position: absolute;
-		transition: transform 1s, box-shadow 1s;
-		z-index: 2;
-	}
-	
-	#geoInfo_3 {
 		margin-top: -0.9%;
 		margin-left: 12.6%;
 		width: auto;
@@ -618,8 +599,8 @@
 		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
 	}
-	
-	#geoInfo_4 {
+
+	#geoInfo_3 {
 		margin-top: -10%;
 		margin-left: 71%;
 		width: auto;
@@ -629,7 +610,7 @@
 		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
 	}
-	
+
 	#stat {
 		top: 97%;
 		left: 79%;
@@ -762,14 +743,6 @@
 		opacity: 100%;
 		transition: transform 1s, box-shadow 1s;
 		z-index: -1;
-	}
-
-	#boob {
-		top: 2.6%;
-		margin-left: 35.1%;
-		scale: 166%;
-		position: fixed;
-		z-index: 5;
 	}
 
 	#Ver {
@@ -1520,20 +1493,8 @@
 		visibility: hidden;
 		z-index: 1;
 	}
-	
+
 	#geoInfo_2 {
-		margin-top: -5%;
-		margin-left: -15.1%;
-		width: auto;
-		height: auto;
-		scale: 143%;
-		position: absolute;
-		transition: transform 1s, box-shadow 1s;
-		visibility: hidden;
-		z-index: 2;
-	}
-	
-	#geoInfo_3 {
 		margin-top: 1%;
 		margin-left: 14.3%;
 		width: auto;
@@ -1545,7 +1506,7 @@
 		z-index: 1;
 	}
 	
-	#geoInfo_4 {
+	#geoInfo_3 {
 		margin-top: -8%;
 		margin-left: 71%;
 		width: auto;
