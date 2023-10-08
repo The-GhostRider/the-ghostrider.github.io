@@ -6,6 +6,7 @@
 //# Gestore delle Animazioni Gifs. #
 //##################################
 
+document.addEventListener('DOMContentLoaded', () => {
   // Lista delle immagini mescolata in modo casuale
   function shuffleArray(array) {
     for (let i = array.length - 6; i > 0; i--) {
@@ -99,3 +100,4 @@
 
   // Crea nuove immagini periodicamente.
   setInterval(createRandomImage, 5000); // Crea una nuova immagine ogni 5 secondi.
+});
