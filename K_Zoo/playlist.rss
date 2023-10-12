@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:jwplayer="https://rss.jwpcdn.com/">
+	<channel>
+		<item>
+			<title> 1 </title>
+			<description>Docu-Zoo</description>
+			<jwplayer:image>lozoodi105.jpg</jwplayer:image>
+			<jwplayer:source file="https://868418841.tapecontent.net/radosgw/949WV2GmpMHZR4/8N11x9UYW8YcRCZfc6PPQbpQ-7kfnEG9Cy7YmajXeA-nYBEraC7IA_ID5FsSf8j3bVs_gMtnvEGUsw7DmpyRYvD7GL_rRFVv5WZIh19c3W8gB7GZ2SlcUVw9h2aF5BUeqVhHcjI_8hepUTrlggxxpOtFf2pANl4_RsYYCAjTetenlTh_Ra1kX0ofP1Ucx4e0UY6DbVb54Jo_5o0JEpC_5LN-nW4UM2g5IuBAgl01GXhROY4R1lAybOOafJf6t0mcebLJx7zc0g4NyE4UrQuZDAPy2E90ktcINY6uQQ/Docu+Zoo+Low.mp4?stream=1" />
+		</item>
+
+		<item>
+			<title> 2 </title>
+			<description>  Pino MasterFlash  </description>
+			<jwplayer:image>lozoodi105.jpg</jwplayer:image>
+			<jwplayer:source file="https://2371755307.tapecontent.net/radosgw/6kX1mMYM3yFxWd/P3jeWJmmb0fRMjz5om2ju2OLl-bdNBLALPvLlr3-WyBfHarpR60WPAwn9LHCrqctSO-TWolgCf37MVf4K9GHJoovwS_uifRupZH14lbXG2zZkaKQsuPqE6jeGnxFvTEgpR1F0H20rP0W1J6cQcw_KQw0TsOnLRyWqgH6q-VlSHevkiD2BT5g-aMsnUagn291Dm7f8Jrh_dYl_zYXtRT2ED16R1P_e3TTUiLeYVmi38vF6ArRtaJ1rcVqxss_AhAIlgvyg_NYRaRPUTBEa-KecXqM9NLiQqX-oKE2rw/Zoo-+Pino+MasterFlash.mp4?stream=1" />
+		</item>
+	</channel>
+</rss>

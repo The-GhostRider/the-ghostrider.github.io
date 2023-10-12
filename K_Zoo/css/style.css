@@ -1,0 +1,82 @@
+/*
+   Source file:
+
+   https://github.com/flowplayer/www/blob/master/content/media/css/playlist/dots.styl
+
+*/
+@media (max-width: 4000px) {
+	body {
+		text-align: center;
+		font-size: 22px;
+		color: #010409;
+		size: 1920px 1080px;
+		margin: 0mm 0mm 0mm 0mm;
+		margin-bottom: 37%;
+		font-family: "Cooper Black", sans-serif;
+		background-size: 143% 143%;
+		background-image: 
+		linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9)),
+		linear-gradient(to right, rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
+		background-position: top left, bottom left;
+		overflow: hidden;
+		padding: 10px;
+	}
+
+	#myElement {
+		position: fixed;
+		margin-left: 200px;
+		top: 70px;
+		float: center;
+		z-index: 99999;
+	}
+
+	#fullScreenButton {
+		margin-top: 26%;
+		margin-left: 28%;
+		position: fixed;
+		padding: 0%;
+		font-size: 226%;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
+}
+	}
+}
+
+/* ############################################################################################################################# */
+/* ############################################################################################################################# */
+/* ############################################################################################################################# */
+@media only screen and (min-width: 432px) and (orientation: portrait) {
+	body {
+		font-size: 12px;
+		size: 432px 768px;
+		margin: 1mm 1mm 1mm 1mm;
+		margin-bottom: 177%;
+		font-family: "Cooper Black", sans-serif;
+		background-size: 362%;
+		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9)), linear-gradient(to right, rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
+		background-position: top left, bottom left;
+		overflow: hidden;
+		padding: 10px;
+	}
+
+	#myElement {
+		position: fixed;
+		margin-left: -10%;
+		top: 30%;
+		float: center;
+		transform: rotate(90deg);
+		z-index: 99999;
+	}
+
+	#fullScreenButton {
+		margin-top: 60%;
+		margin-left: -40%;
+		position: fixed;
+		padding: 0.5%;
+		scale: 200%;
+		font-size: 326%;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));	
+		transform: rotate(90deg);
+	}
+}

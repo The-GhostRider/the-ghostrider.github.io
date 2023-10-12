@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<!-- Start Head -->
+	<head>
+		<script src="js/b7Bu3sWREeSxexJtO5t17w.js"></script>
+		<script src="js/fullscreen.js "></script>
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	</head>
+	<!-- End Head -->
+	
+	<!-- Start JWPlayer -->
+	<div id="myElement">Loading the player...</div>
+	<button id="fullScreenButton">💢</button>	
+	
+	<script>
+		jwplayer("myElement").setup({
+		playlist: "playlist.rss",
+		width: 1200,
+		height: 500,
+		skin: "grungetape.xml",
+		listbar: {
+			skin: "grungetape.xml",
+			position: "right",
+			size: 200
+		}
+		});
+	</script>
+	<!--/End JWPlayer -->
+</html>
