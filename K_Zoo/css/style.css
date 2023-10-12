@@ -23,24 +23,22 @@
 	}
 
 	#myElement {
-		position: fixed;
-		margin-left: 200px;
-		top: 70px;
-		float: center;
-		z-index: 99999;
+		position: initial;
+		margin-left: -4%;
 	}
 
 	#fullScreenButton {
-		margin-top: 26%;
-		margin-left: 28%;
+		margin-top: 20%;
+		margin-left: 34%;
 		position: fixed;
-		padding: 0%;
-		font-size: 226%;
+		padding: 0.5%;
+		font-size: 600%;
 		background-color: #010409;
 		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
-}
+		z-index: 3;
 	}
 }
+
 
 /* ############################################################################################################################# */
 /* ############################################################################################################################# */
@@ -60,23 +58,18 @@
 	}
 
 	#myElement {
-		position: fixed;
-		margin-left: -10%;
-		top: 30%;
-		float: center;
-		transform: rotate(90deg);
-		z-index: 99999;
+		position: inherit;
+		margin-left: -24%;
 	}
 
 	#fullScreenButton {
-		margin-top: 60%;
-		margin-left: -40%;
+		margin-top: 20%;
+		margin-left: 34%;
 		position: fixed;
 		padding: 0.5%;
-		scale: 200%;
-		font-size: 326%;
+		font-size: 600%;
 		background-color: #010409;
-		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));	
-		transform: rotate(90deg);
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
+		z-index: 3;
 	}
 }
