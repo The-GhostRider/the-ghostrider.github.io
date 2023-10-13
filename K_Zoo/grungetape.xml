@@ -12,7 +12,7 @@
 		<component name="controlbar">
 			<settings>
 				<setting name="margin" value="10" />
-				<setting name="fontsize" value="10" />
+				<setting name="fontsize" value="18" />
 			</settings>
 
 			<elements>
