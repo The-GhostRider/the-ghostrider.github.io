@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta property="og:type" content="website">
-		<meta name="viewport" content="width=device-width, initial-scale=0.2">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta property="og:url" content="https://the-ghostrider.github.io/K_Zoo/">
 		<meta property="og:url" content="https://the-ghostrider.github.io/K_Zoo/index.html">
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -30,23 +30,24 @@
 		<script src="./js/b7Bu3sWREeSxexJtO5t17w.js"></script>
 	</head>
 	<!-- End Head -->
-	
-	<!-- Start JWPlayer -->
-	<div id="myElement">Loading the player...</div>
-	<button id="fullScreenButton">💢</button>	
-	
-	<script>
-		jwplayer("myElement").setup({
-		playlist: "playlist.rss",
-		width: 1200,
-		height: 950,
-		skin: "grungetape.xml",
-		listbar: {
+	<body>
+		<!-- Start JWPlayer -->
+		<div id="myElement">Loading the player...</div>
+		<button id="fullScreenButton">💢</button>	
+		
+		<script>
+			jwplayer("myElement").setup({
+			playlist: "playlist.rss",
+			width: 1200,
+			height: 950,
 			skin: "grungetape.xml",
-			position: "right",
-			size: 200
-		}
-		});
-	</script>
-	<!--/End JWPlayer -->
+			listbar: {
+				skin: "grungetape.xml",
+				position: "right",
+				size: 200
+			}
+			});
+		</script>
+		<!--/End JWPlayer -->
+	</body>
 </html>
