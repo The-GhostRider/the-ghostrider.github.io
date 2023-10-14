@@ -26,28 +26,19 @@
 		<link rel="canonical" href="https://the-ghostrider.github.io/K_Zoo/">
 		<link rel="canonical" href="https://the-ghostrider.github.io/K_Zoo/index.html">
 		<link rel="stylesheet" type="text/css" href="./css/style.css" />
-		<script src="./js/fullscreen.js "></script>
-		<script src="./js/b7Bu3sWREeSxexJtO5t17w.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script>
 	</head>
 	<!-- End Head -->
 	<body>
-		<!-- Start JWPlayer -->
-		<div id="myElement">Loading the player...</div>
-		<button id="fullScreenButton">💢</button>	
-		
-		<script>
-			jwplayer("myElement").setup({
-			playlist: "playlist.rss",
-			width: 432,
-			height: 768,
-			skin: "grungetape.xml",
-			listbar: {
-				skin: "grungetape.xml",
-				position: "right",
-				size: 200
-			}
-			});
-		</script>
-		<!--/End JWPlayer -->
+		<div class="container">
+			<div class="button-list">
+				<button class="video-button" data-src="https://mega.nz/embed/sfYH3QwT#3QAjgrOwykIk_Q21H-uiid3SzbZ8L187U-kv9wO-yrA">Docu-Zoo</button>
+				<button class="video-button" data-src="https://mega.nz/embed/9HJ3yA6b#rs6Yt1xFTJ4eDMFs7iZVAaqVL2STRcKEEKDD5wt9onY">Pino MasterFlash</button>
+				<button class="video-button" data-src="">Vuoto</button>
+			</div>
+			<div class="video-container">
+				<iframe id="video-iframe" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
 	</body>
 </html>

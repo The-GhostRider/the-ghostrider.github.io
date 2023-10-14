@@ -1,5 +1,5 @@
 @media (max-width: 4000px) {
-	body {
+	html {
 		text-align: center;
 		font-size: 22px;
 		color: #010409;
@@ -7,64 +7,61 @@
 		margin: 0mm 0mm 0mm 0mm;
 		margin-bottom: 37%;
 		font-family: "Cooper Black", sans-serif;
-		background-size: 143% 143%;
-		background-image: 
-		linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9)),
-		linear-gradient(to right, rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
-		background-position: top left, bottom left;
-		overflow: hidden;
-		padding: 10px;
-	}
-
-	#myElement {
-		position: initial;
-		margin-left: -4%;
-	}
-
-	#fullScreenButton {
-		margin-top: -28%;
-		margin-left: 40.5%;
-		position: fixed;
-		padding: 0.5%;
-		font-size: 450%;
-		background-color: #010409;
-		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
-		z-index: 3;
-	}
-	@import url('//cdn.flowplayer.com/releases/native/3/stable/style/flowplayer.css');
-	
-	#player {
-	max-width: 40em;
-	}
-}
-
-
-/* ############################################################################################################################# */
-/* ############################################################################################################################# */
-/* ############################################################################################################################# */
-@media only screen and (max-width: 432px) and (orientation: portrait) {
-	html {
-		font-size: 12px;
-		size: 432px 768px;
-		margin: 1mm 1mm 1mm 1mm;
-		margin-bottom: 177%;
-		font-family: "Cooper Black", sans-serif;
-		background-size: 362%;
+		background-size: 110% 200%;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9)), linear-gradient(to right, rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
 		background-position: top left, bottom left;
 		overflow: hidden;
 		padding: 10px;
 	}
 
-	#myElement {
+	.container {
+		display: flex;
+	}
+
+	.button-list {
+		position: fixed;
+		margin-top: 3%;
+		margin-left: 71%;
+		overflow-y: auto;
+		max-height: 200px;
+		margin-right: 20px;
+	}
+
+	.video-button {
+		display: block;
+		margin: 10px;
+		cursor: pointer;
+		border: 3px solid;
+		border-radius: 38px;
+		border-color: #2b5983;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
+		box-shadow: -1px -2px 10px 2px rgba(43,89,131, 0.9);
+		transition: transform 1s, box-shadow 1s;
+	}
+
+	.video-button:hover {
+		background-color: transparent;
+		box-shadow: -1px -2px 10px 2px rgba(255,255,255, 0.9);		
+		transition: transform 0.5s, box-shadow 0.5s;
+	}
+
+	.video-container {
+		margin-top: 3%;
+		margin-left: 33%;
+		width: 640px;
+		height: 480px;
+		background-image: url(../lozoodi105.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 		position: relative;
-		max-width: 113%;
-		max-height: 0%;
-		margin-top: -3%;
-		margin-left: 0%;
-		left: 3%;
-		top: 0%;
-		bottom: 0%;
+	}
+
+	#video-iframe {
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
 	}
 
 	#fullScreenButton {
@@ -78,40 +75,88 @@
 		z-index: 3;
 	}
 
-	.jwplaylist .jwlist {
-		position: absolute;
-		width: 100%;
-		height: 44%;
-		list-style: none;
-		margin: 0px;
-		padding: 0px;
+}
+
+
+/* ############################################################################################################################# */
+/* ############################################################################################################################# */
+/* ############################################################################################################################# */
+@media only screen and (max-width: 432px) and (orientation: portrait) {
+
+	html {
+		text-align: center;
+		font-size: 22px;
+		color: #010409;
+		size: 432px 768px;
+		margin: 0mm 0mm 0mm 0mm;
+		margin-bottom: 37%;
+		font-family: "Cooper Black", sans-serif;
+		background-size: 110% 200%;
+		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9)), linear-gradient(to right, rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
+		background-position: top left, bottom left;
 		overflow: hidden;
-		transition: top 0.35s ease 0s;
+		padding: 10px;
 	}
 
-	#myElement_jwplayer_playlistcomponent .jwdescription {
+	.container {
+		display: flex;
+	}
+
+	.button-list {
+		position: fixed;
+		margin-top: 80%;
+		margin-left: 30%;
+		overflow-y: auto;
+		max-height: 200px;
+		margin-right: 20px;
+	}
+
+	.video-button {
 		display: block;
-		font-size: 18px;
-		line-height: 18px;
-		margin-left: 10px;
-		margin-right: 10px;
-		overflow: hidden;
-		height: 36px;
+		margin: 10px;
+		cursor: pointer;
+		border: 3px solid;
+		border-radius: 38px;
+		border-color: #2b5983;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
+		box-shadow: -1px -2px 10px 2px rgba(43,89,131, 0.9);
+		transition: transform 1s, box-shadow 1s;
+	}
+
+	.video-button:hover {
+		background-color: transparent;
+		box-shadow: -1px -2px 10px 2px rgba(255,255,255, 0.9);		
+		transition: transform 0.5s, box-shadow 0.5s;
+	}
+
+	.video-container {
+		margin-top: 0%;
+		margin-left: 0%;
+		width: 432px;
+		height: 324px;
+		background-image: url(../lozoodi105.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 		position: relative;
 	}
 
-	#myElement_controlbar {
-		position: absolute;
-		top: 65%;
-		margin-top: 0%;
-		margin-left: -4%;
+	#video-iframe {
 		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
 	}
 
-	@import url('//cdn.flowplayer.com/releases/native/3/stable/style/flowplayer.css');
-	
-	#player {
-	max-width: 40em;
+	#fullScreenButton {
+		top: 70%;
+		margin-left: 14%;
+		position: fixed;
+		padding: 0.5%;
+		font-size: 300%;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(230, 0, 126, 0.6), rgba(238, 63, 87, 0.5), rgba(252, 177, 17, 0.9));
+		z-index: 3;
 	}
 
 }
