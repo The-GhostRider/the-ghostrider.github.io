@@ -887,16 +887,17 @@
 	
 	#bitrateClock {
 		top: 104%;
-		left: 164%;
+		left: 116%;
 		scale: 135%;
-		width: 48%;
+		width: 135%;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
 		font-size: 40px;
+		font-weight: bold;
 		font-family: "Cooper Black", sans-serif;
 		position: fixed;
 		padding: 13px;
 		border: 3px solid;
-		border-radius: 10px;
+		border-radius: 30px;
 		border-color: #2b5983;
 		box-shadow: -1px -1px 3px 1px rgba(255,255,255, 0.9);
 		z-index: 1;
@@ -912,14 +913,13 @@
 		scale: 300%;
 		margin-top: 4%;
 		margin-left: 0%;
-		left: -44%;
-		width: 31%;
+		width: 16%;
 		background-color: transparent;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
 		font-size: 15px;
+		font-weight: bold;
 		font-family: "Cooper Black", sans-serif;
 		display: inline-block;
-		position: relative;
 		padding: 10px;
 		border: 3px solid;
 		border-radius: 10px;
@@ -953,7 +953,7 @@
 	
 	#playButton {
 		top: 135%;
-		left: 35%;
+		left: 42%;
 		position: fixed;
 	}
 
@@ -977,8 +977,8 @@
 	}
 
 	#fullScreenButton {
-		top: 138%;
-		left: 76%;
+		top: 140%;
+		left: 71%;
 		width: 15%;
 		height: 6.5%;
 		scale: 360%;
@@ -991,14 +991,14 @@
 	}
 
 	#backward-2-min {
-		top: 105%;
-		left: 47%;
+		top: 106%;
+		left: 33%;
 		position: fixed;
 	}
 
 	#forward-2-min {
-		top: 105%;
-		left: 303%;
+		top: 106%;
+		left: 326%;
 		position: fixed;
 	}
 
