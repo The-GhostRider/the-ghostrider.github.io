@@ -33,32 +33,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //##################################################################
 //# Recupera il manifesto di streaming video dalla risorsa remota. #
 //##################################################################
+let currentVideoBitrate = 0;
 
 document.addEventListener('DOMContentLoaded', (event) => {
-	fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
-	.then(response => response.text())
-	.then(manifest => {
-		let parser = new DOMParser();
-		let xmlDoc = parser.parseFromString(manifest,"text/xml");
-	
-		// Ottiene tutte le rappresentazioni.
-		let representations = xmlDoc.getElementsByTagName('Representation');
-	
-		for (let i = 0; i < representations.length; i++) {
-		// Ottiene il bitrate di ciascuna rappresentazione in bit/s.
-		let bitrateInBps = representations[i].getAttribute('bandwidth');
-		
-		// Converte il bitrate in kbps.
-		let bitrateInKbps = bitrateInBps / 1000;
-		
-		// Stampa il bitrate sulla console.
-		console.log(`Bitrate della rappresentazione ${i}: ${bitrateInKbps} kbps`);
-		
-		// Visualizza il bitrate nell'elemento HTML.
-		document.getElementById('bitrateValue').innerText = bitrateInKbps + ' kbps';
+    fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
+    .then(response => response.text())
+    .then(manifest => {
+        let parser = new DOMParser();
+		console.log('parser', parser);
+        let xmlDoc = parser.parseFromString(manifest, "text/xml");
+		console.log('xmlDoc', xmlDoc);
+
+        // Ottieni il valore corrente del bitrate audio.
+        let currentAudioBitrate = xmlDoc.querySelector('AdaptationSet[contentType="audio"] Representation').getAttribute('bandwidth');
+		console.log('currentAudioBitrate', currentAudioBitrate);
+
+        // Elemento HTML in cui verranno visualizzati i bitrate audio e video.
+        let audioBitrateContainer = document.getElementById('bitrateValueAudio');
+		console.log('audioBitrateContainer', audioBitrateContainer);
+        let videoBitrateContainer = document.getElementById('bitrateValueVideo');
+		console.log('videoBitrateContainer', videoBitrateContainer);
+
+        // Assegna i valori dei bitrate audio e video agli elementi HTML
+        audioBitrateContainer.innerText = `Bitrate Audio: ${currentAudioBitrate} kbps`;
+
+        // Trova l'elemento video nel manifesto DASH.
+        let videoElement = xmlDoc.querySelector('AdaptationSet[contentType="video"] Representation');
+		console.log('videoElement', videoElement);
+        if (videoElement) {
+            let currentVideoBitrate = videoElement.getAttribute('bandwidth');
+			console.log('currentVideoBitrate', currentVideoBitrate);
+            videoBitrateContainer.innerText = `Bitrate Video: ${currentVideoBitrate} kbps`;
+        }
+    })
+    .catch(error => console.error('Errore durante il caricamento del manifest.mpd:', error));
+
+	// Aggiungi un listener per monitorare il cambio di rappresentazione video direttamente sul tuo elemento video.
+	let mediaPlayer = document.getElementById('mediaset-player');
+	console.log('mediaPlayer', mediaPlayer);
+	mediaPlayer.addEventListener('representationchanged', function(e) {
+		if (e.type === 'video' && e.data) {
+			currentVideoBitrate = e.data.bandwidth / 1000; // Converti in kbps
+			videoBitrateContainer.innerText = `Bitrate Video: ${currentVideoBitrate} kbps`;
 		}
-	})
-	.catch(error => console.error('Errore durante il caricamento del manifest.mpd:', error));
+	});
 });
 
 
@@ -220,7 +238,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			const remainingSeconds = seconds % 60;
 			const timeString = `${hours}:${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 			recordingTimeElement.textContent = timeString;
-			console.log('Recording Time Updated to: ' + timeString);
+		//	console.log('Recording Time Updated to: ' + timeString);
 		}
 	}
 });

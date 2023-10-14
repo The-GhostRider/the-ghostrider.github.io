@@ -1,9 +1,9 @@
 @media (max-width: 4000px) {
 	/* Stili per PC, tablet, ecc. */
 	#Team {
-		top: 38%;
-		left: 53%;
-		scale: 103%;
+		top: 42%;
+		left: 55%;
+		scale: 95%;
 		position: absolute;
 		padding: 12px;
 		opacity: 70%;
@@ -160,7 +160,7 @@
 	#bitrateClock {
 		top: 101%;
 		left: 82%;
-		width: 115px;
+		width: 30%;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.9), rgba(238, 63, 87, 0.5), rgba(230, 0, 126, 0.9));
 		font-size: 22px;
 		font-family: "Cooper Black", sans-serif;

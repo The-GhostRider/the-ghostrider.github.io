@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Array di percorsi delle immagini disponibili.
   const imagePaths = [
-    './img/Zoo1.gif',
-    './img/Zoo2.gif',
-    './img/Zoo3.gif',
-    './img/Zoo4.gif',
-    './img/Zoo5.gif',
-    './img/Zoo6.gif',
-    './img/Zoo7.gif',
+    'https://i.ibb.co/fMkwTqJ/Zoo1.gif',
+    'https://i.ibb.co/VBMNQ33/Zoo2.gif',
+    'https://i.ibb.co/YN1C7LQ/Zoo3.gif',
+    'https://i.ibb.co/L5w6j5w/Zoo4.gif',
+    'https://i.ibb.co/Z62GGGR/Zoo5.gif',
+    'https://i.ibb.co/VWnSf8N/Zoo6.gif',
+    'https://i.ibb.co/f12WBCN/Zoo7.gif',
   ];
 
   // Mescola l'array delle immagini in modo casuale prima di iniziare l'animazione.
