@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		if (!isPlaying) {
 			// Inizia la riproduzione.
 			videoPlayer.play();
-			playButton.textContent = "⏸ Pause";
+			playButton.textContent = "⏸\nPause";
 			console.log('Play Button Clicked - Video Playing');
 			activateTimerStyle(); // Attiva lo stile quando si avvia la riproduzione
 			isPlaying = true;
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		} else {
 			// Mette in pausa la riproduzione.
 			videoPlayer.pause();
-			playButton.textContent = "▶️ Play";
+			playButton.textContent = "▶️\nPlay";
 			console.log('Play Button Clicked - Video Paused');
 			resetTimerStyle(); // Ripristina lo stile quando si ferma la riproduzione
 			isPlaying = false;
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	stopButton.addEventListener('click', () => {
 		if (isPlaying) {
 			videoPlayer.pause();
-			playButton.textContent = "▶️ Play";
+			playButton.textContent = "▶️\nPlay";
 			isPlaying = false;
 		}
 		videoPlayer.currentTime = 0;
@@ -157,12 +157,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	recButton.addEventListener('click', () => {
 	if (mediaRecorder && mediaRecorder.state === 'recording') {
 		mediaRecorder.stop();
-		recButton.textContent = '🔴 ▶️ Rec/AutoPlay';
+		recButton.textContent = '🔴/▶️\nRec/AutoPlay';
 		console.log('Rec Button Clicked - Video Recording');
 		clearInterval(recordingInterval);
 		recordingStartTime = null;
 		recordingTimeElement.textContent = '0:0:00';
-		playButton.textContent = "▶️ Play";
+		playButton.textContent = "▶️\nPlay";
 		console.log('Play Button Clicked - Video Paused');
 		resetTimerStyle(); // Ripristina lo stile quando si ferma la registrazione
 	} else {
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	
 		if (!isPlaying) {
 		videoPlayer.play();
-		playButton.textContent = "⏸ Pause";
+		playButton.textContent = "⏸\nPause";
 		console.log('Play Button Clicked - Video Playing');
 		activateTimerStyle(); // Attiva lo stile quando si avvia la registrazione
 		}
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		window.URL.revokeObjectURL(url);
 	
 		recordedChunks = [];
-		recButton.textContent = '🔴 ▶️ Rec/AutoPlay';
+		recButton.textContent = '🔴/▶️\nRec/AutoPlay';
 		console.log('Rec Button Clicked - Video Recording');
 	
 		videoPlayer.pause();
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		};
 	
 		mediaRecorder.start();
-		recButton.textContent = '⏹ Stop-Rec';
+		recButton.textContent = '⏹\nStop-Rec';
 		console.log('Stop Button Clicked - Video Recording');
 	}
 	});

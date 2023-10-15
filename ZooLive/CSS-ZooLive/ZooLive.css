@@ -220,6 +220,7 @@
 		border: 3px solid;
 		border-radius: 10px;
 		border-color: #2b5983;
+		white-space: pre;
 		box-shadow: -1px -1px 3px 1px rgba(255,255,255, 0.9);
 		transition: transform 0.5s, box-shadow 0.5s;
 		z-index: 1;
@@ -958,6 +959,7 @@
 		border: 3px solid;
 		border-radius: 10px;
 		border-color: #2b5983;
+		white-space: pre;
 		box-shadow: -1px -1px 3px 1px rgba(255,255,255, 0.9);
 		transition: transform 0.5s, box-shadow 0.5s;
 		z-index: 1;
