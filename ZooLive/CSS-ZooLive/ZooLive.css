@@ -353,7 +353,7 @@
 	}
 
 	.tip-content_2 {
-		top: 48%;
+		top: 45%;
 		left: 84.6%;
 		width: 29%;
 		height: 45%;
@@ -364,7 +364,7 @@
 		color: rgb(255 255 255);
 		display: none;
 		scale: 65%;
-		position: absolute;
+		position: fixed;
 		font-size: 14px;
 		line-height: 135%;
 		text-align: left;
@@ -619,22 +619,22 @@
 	}
 
 	#geoInfo_2 {
-		top: 58%;
+		top: 51%;
 		left: 20.6%;
 		width: 59%;
-		height: 31%;
+		height: 36%;
 		scale: 167%;
-		position: absolute;
+		position: fixed;
 		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
 	}
 
 	#geoInfo_3 {
-		top: -1.5%;
+		top: -4.9%;
 		left: 35%;
 		width: 36%;
 		height: 53%;
-		scale: 137%;
+		scale: 119%;
 		position: fixed;
 		transition: transform 1s, box-shadow 1s;
 		z-index: 1;
