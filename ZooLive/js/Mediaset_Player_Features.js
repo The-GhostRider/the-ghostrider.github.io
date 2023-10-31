@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //##################################################################
 //# Recupera il manifesto di streaming video dalla risorsa remota. #
 //##################################################################
-let currentVideoBitrate = 0;
 
 document.addEventListener('DOMContentLoaded', (event) => {
     fetch('https://live03-seg.msr.cdn.mediaset.net/live/ch-r1/r1-clr.isml/manifest.mpd')
@@ -58,7 +57,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         audioBitrateContainer.innerText = `Bitrate Audio: ${currentAudioBitrate} kbps`;
 
         // Trova l'elemento video nel manifesto DASH.
-        let videoElement = xmlDoc.querySelector('AdaptationSet[contentType="video"] Representation');
+		let currentVideoBitrate = 0;
+        let videoElement = xmlDoc.querySelector('MPD[type="dynamic"] Period[start="PT0S"] AdaptationSet[id="2"][minBandwidth="512000"][maxBandwidth="4800000"] Representation[id="video=4800000"][scanType="progressive"]');
 		console.log('videoElement', videoElement);
         if (videoElement) {
             let currentVideoBitrate = videoElement.getAttribute('bandwidth');
@@ -68,15 +68,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
     .catch(error => console.error('Errore durante il caricamento del manifest.mpd:', error));
 
-	// Aggiungi un listener per monitorare il cambio di rappresentazione video direttamente sul tuo elemento video.
-	let mediaPlayer = document.getElementById('mediaset-player');
-	console.log('mediaPlayer', mediaPlayer);
-	mediaPlayer.addEventListener('representationchanged', function(e) {
-		if (e.type === 'video' && e.data) {
-			currentVideoBitrate = e.data.bandwidth / 1000; // Converti in kbps
-			videoBitrateContainer.innerText = `Bitrate Video: ${currentVideoBitrate} kbps`;
-		}
-	});
 });
 
 
