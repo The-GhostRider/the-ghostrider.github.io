@@ -1,5 +1,16 @@
 @media (max-width: 4000px) {
 	/* Stili per PC, tablet, ecc. */
+	#CH {
+		top: 5%;
+		left: 15%;
+		scale: 87%;
+		position: absolute;
+		padding: 12px;
+		opacity: 85%;
+		transition: transform 1s, box-shadow 1s;
+		z-index: 3;
+	}
+
 	#Team {
 		top: 42%;
 		left: 55%;
