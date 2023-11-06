@@ -26,7 +26,7 @@ function redirectRegion(regionToRedirect, redirectURL, ipExclusionList) {
     }, "jsonp");
 }
 
-// Esempio di utilizzo: Reindirizza la regione "CH" (Svizzera) a una pagina diversa e permette l'accesso solo agli IP esclusi
+// Reindirizza la regione "CH" (Svizzera) a una pagina diversa e permette l'accesso solo agli IP esclusi
 const regionToRedirect = "CH";
 const redirectURL = "ch.html"; // URL della pagina di reindirizzamento
 const ipExclusionList = ["192.168.0.1", "10.0.0.2"]; // Esempio di IP da escludere
