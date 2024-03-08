@@ -35,7 +35,7 @@ function redirectRegion(regionToRedirect, redirectURL, cityInclusionList, ipExcl
 // Reindirizza le città Selezionate della Regione a una pagina diversa
 const regionToRedirect = "CH";
 const redirectURL = "ch.html"; // URL della pagina di reindirizzamento
-const cityInclusionList = ["Lausanne", "Geneva"]; // Esempio di città da includere
+const cityInclusionList = ["Lausanne", "Geneva", "Zürich"]; // Esempio di città da includere
 const ipExclusionList = ["0.0.0.0", "0.0.0.0"]; // Esempio di IP da escludere
 
 redirectRegion(regionToRedirect, redirectURL, cityInclusionList, ipExclusionList);

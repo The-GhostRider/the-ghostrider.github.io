@@ -42,6 +42,7 @@
 		<script type="text/javascript" src="./js/Gifs_Animations.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript" src="./js/B_Region.js"></script>
+		<script type="text/javascript" src="./js/Spotify_Track.js"></script>
 		<script type="text/javascript" src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 		<script type="text/javascript" src="https://codicebusiness.shinystat.com/dcode/dcode.min.js"></script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y6V1Z9H6"></script>
@@ -164,8 +165,7 @@
 	--></span>
 		<div id="Spoilers" class="spoilers-container">
 			<div class="spoiler" onclick="toggleSpoiler(this)"><!--
-								-->[SOLO PC]<!--
-			--><br><!--
+			--><b style="text-align: center;">[SOLO PC]</b><!--
 				-->COSE DA SCARICARE PER LA CONVERSIONE IN MP4<!--
 			--><br><!--
 					--><b class="fire-text" >==>[CLICCAMI MONGOLACCHIONE!!!]<==</b><!--
@@ -178,6 +178,18 @@
 				</div>
 			</div>
 		</div>
+		<div class="spoiler2" onclick="toggleSpoiler(this)">
+			<b style="text-align: center;">[CLASSIFICA PUNTI POPOLARITÀ DI SPOTIFY]<br>
+			(IN TEMPO REALE)</b>
+			<br>
+			<b class="fire-text" >==>[SAN JIMMY 2024!]<==</b>
+			<div id="spoilerContent2" class="spoiler-content">
+				<pre id="Download2">
+					<div id="trackDetails"></div>
+				</pre>
+			</div>
+		</div>
+		
 <!--
 		<a title="Google Analytics Alternative" href="https://clicky.com/101441523">
 			<img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" />

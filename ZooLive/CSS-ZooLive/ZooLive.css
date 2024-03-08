@@ -520,9 +520,51 @@
 		z-index: 3;
 	}
 
+	.spoiler2 {
+		top: 40%;
+		left: 77%;
+		width: 17%;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(252, 177, 17, 0.8), rgba(238, 63, 87, 0.6), rgba(230, 0, 126, 0.4));
+		color: rgb(255 255 255);
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: left;
+		scale: 107%;
+		font-size: 11px;
+		font-weight: bold;
+		padding: 5px;
+		border: 2px solid;
+		border-radius: 10px;
+		border-color: #2b5983;
+		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
+		transition: transform 1s, box-shadow 1s;
+		cursor: pointer;
+		gap: 2px;
+		z-index: 3;
+	}
+
 	.spoiler-content {
-		left: 49%;
 		top: 153%;
+		left: 49%;
+		width: 72%;
+		height: 125%;
+		display: none;
+		position: absolute;
+		transition: transform 1s, box-shadow 1s;
+		transform: translate(-50%, -50%);
+		animation: fadeIn 0.9s;
+		z-index: 3;
+	}
+
+	#spoilerContent2 {
+		top: 153%;
+		left: 49%;
 		width: 72%;
 		height: 125%;
 		display: none;
@@ -534,6 +576,13 @@
 	}
 
 	.spoiler:hover {
+		border: 1px solid;
+		border-color: #2b5983;
+		box-shadow: -1px -2px 10px 2px rgba(204,204,204, 0.9);
+		transition: transform 1s, box-shadow 1s;
+	}
+
+	.spoiler2:hover {
 		border: 1px solid;
 		border-color: #2b5983;
 		box-shadow: -1px -2px 10px 2px rgba(204,204,204, 0.9);
@@ -556,8 +605,8 @@
 	}
 
 	#Download {
-		top: 0%;
-		margin-left: -0.6%;
+		top: -98%;
+		margin-left: -141.6%;
 		height: 80%;
 		width: 95%;
 		padding: 3px;
@@ -573,6 +622,28 @@
 		border-color: #2b5983;
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
+		z-index: 3;
+	}
+
+	#Download2 {
+		margin-top: -218%;
+		margin-left: -185.6%;
+		height: 1088px;
+		width: auto;
+		padding: 3px;
+		scale: 75%;
+		position: absolute;
+		background-color: #010409;
+		background-image: linear-gradient(rgba(252, 177, 17, 0.8), rgba(238, 63, 87, 0.6), rgba(230, 0, 126, 0.4));
+		text-align: center;
+		font-size: 14px;
+		line-height: 186%;
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #2b5983;
+		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
+		transition: transform 1s, box-shadow 1s;
+		overflow-y: auto;
 		z-index: 3;
 	}
 
@@ -1188,15 +1259,15 @@
 		z-index: 3;
 	}
 
-	.spoiler {
-		top: 204%;
-		left: 151%;
-		width: 77%;
-		scale: 300%;
+	.spoiler2 {
+		top: 72%;
+		left: 34%;
+		width: 41%;
+		height: 5%;
 		background-color: #010409;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.8), rgba(238, 63, 87, 0.6), rgba(230, 0, 126, 0.4));
 		color: rgb(255 255 255);
-		position: absolute;
+		position: fixed;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -1204,17 +1275,17 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		text-align: left;
-		font-size: 11px;
+		scale: 107%;
+		font-size: 30px;
 		font-weight: bold;
 		padding: 5px;
-		border: 1px solid;
+		border: 2px solid;
 		border-radius: 10px;
-		border-color: #79c0ff;
+		border-color: #2b5983;
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		cursor: pointer;
 		gap: 2px;
-		visibility: hidden;
 		z-index: 3;
 	}
 
@@ -1259,24 +1330,25 @@
 		display: flex;
 	}
 
-	#Download {
-		margin-top: -1.1%;
-		margin-left: -0.6%;
-		height: 80%;
-		width: 95%;
+	#Download2 {
+		top: -160%;
+		left: 155%;
+		height: 1900px;
+		width: auto;
 		padding: 3px;
 		scale: 100%;
 		position: absolute;
 		background-color: #010409;
 		background-image: linear-gradient(rgba(252, 177, 17, 0.8), rgba(238, 63, 87, 0.6), rgba(230, 0, 126, 0.4));
 		text-align: center;
-		font-size: 14px;
+		font-size: 30px;
 		line-height: 186%;
 		border: 2px solid;
 		border-radius: 20px;
-		border-color: #79c0ff;
+		border-color: #2b5983;
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
+		overflow-y: auto;
 		z-index: 3;
 	}
 
