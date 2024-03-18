@@ -31,6 +31,7 @@ function includeSemplificaScript(codiceSQL, callback) {
 }
 }
 
+
 //#############################
 //# Funzione semplificaCodice #
 //#############################
@@ -89,4 +90,5 @@ function semplificaCodice() {
         codiceSemplificatoPre.textContent = "";
     }
 	});
+	isSimplified = true;
 }

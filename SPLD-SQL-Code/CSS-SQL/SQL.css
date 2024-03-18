@@ -11,6 +11,30 @@
 		padding: 10px;
 	}
 
+	#Counter {
+		top: 0%;
+		left: 0%;
+		height: 110px;
+		width: auto;
+		background-color: #010409;
+		color: #00A46D;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		position: relative;
+		justify-content: center;
+		text-align: right;
+		font-size: 50px;
+		padding: 5px;
+		border: 1px solid;
+		border-radius: 10px;
+		border-color: #79c0ff;
+		box-shadow: 3px 3px 5px rgba(107,169,225, 0.9);
+		transition: transform 1s, box-shadow 1s;
+		z-index: 0;
+	}
+
 	#Logo {
 		margin-top: 0%;
 		margin-left: -72%;
@@ -689,6 +713,30 @@
 		padding: 10px;
 	}
 
+#Counter {
+    top: 58.8%;
+    left: 43%;
+    height: auto;
+    width: auto;
+    background-color: #010409;
+    display: block;
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    position: absolute;
+    /* justify-content: flex-start; */
+    text-align: center;
+    font-size: 19px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #79c0ff;
+    box-shadow: 3px 3px 5px rgba(107,169,225, 0.9);
+    transition: transform 1s, box-shadow 1s;
+    z-index: 0;
+    align-content: center;
+    /* align-items: flex-start; */
+}
+
 	#Logo {
 		margin-top: 0%;
 		margin-left: -40%;
@@ -1103,8 +1151,8 @@
 	}
 
 	#cancellaButton {
-		margin-left: 67%;
-		position: relative;
+		margin-left: 63%;
+		position: absolute;
 	}
 
 	.tip-icon {
@@ -1127,8 +1175,8 @@
 	}
 
 	.tip-content {
-		top: 56.6%;
-		left: 50%;
+		top: 60%;
+		left: 83%;
 		width: auto;
 		height: auto;
 		max-width: 400px;
@@ -1224,16 +1272,15 @@
 
 	.spoiler {
 		margin-top: 15px;
-		width: 55%;
+		width: 38%;
 		background-color: #010409;
 		color: #79c0ff;
-		display: flex;
-		flex-direction: row;
-		align-items: baseline;
-		align-content: center;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		text-align: left;
+		display: block;
+		/* flex-direction: row; */
+		/* align-content: unset; */
+		/* flex-wrap: nowrap; */
+		/* justify-content: center; */
+		text-align: justify;
 		font-size: 16px;
 		font-weight: bold;
 		padding: 3px;
@@ -1243,19 +1290,21 @@
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		cursor: pointer;
-		gap: 15px;
+		/* gap: 15px; */
 		z-index: 0;
+		/* align-items: center; */
 	}
 
 	.spoiler-content {
-		top: 39%;
-		left: 50%;
+		top: 40.5%;
+		left: 49%;
 		margin-top: 10px;
 		width: 658px;
 		max-width: 658px;
 		display: none;
 		position: absolute;
 		padding: 3px;
+		scale: 95%;
 		border: 1px solid;
 		border-radius: 10px;
 		border-color: #79c0ff;

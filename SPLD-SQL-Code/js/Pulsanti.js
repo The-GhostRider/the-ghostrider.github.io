@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const copiaButton = document.getElementById('copiaButton');
 	const chiavePrimaria0Select = document.getElementById('chiavePrimaria0');
 	const chiavePrimaria1Select = document.getElementById('chiavePrimaria1');
+
 	cancellaButton.addEventListener('click', () => {
 		console.log("La funzione Erased è stata chiamata.");
 		codiceSemplificatoPre.innerHTML = '';
@@ -27,10 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			cancellaButton.textContent = "Erase";
 		}, 2000);
 		document.getElementById("cancellaButton").textContent = "Erased!";
+		resetCounter(); // Chiama la funzione resetCounter per reimpostare il conteggio
 		semplificaCodiceButton.disabled = true; // Disabilita il pulsante "Simplify Code"
 		copiaButton.disabled = true; // Disabilita il pulsante "Copy"
 	});
 });
+
 
 
 //##################

@@ -30,6 +30,7 @@
 		<script type="text/javascript" src="./js/Pulsanti.js?v=<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="./js/Logo.js?v=<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="./js/semplificaCodice.js?v=<?php echo time(); ?>"></script>
+		<script type="text/javascript" src="./js/Counter.js?v=<?php echo time(); ?>"></script>
 		<script> hljs.highlightAll(); </script>
 	</head>
 	<body class="elemento-auto-resize">
@@ -48,10 +49,10 @@
 			<div class="spoiler" onclick="toggleSpoiler(0)">
 				<span id="Tip1" class="tip-icon">
 					ℹ️
-				</span>
-					<span class="tip-content"><!--
+				</span><!--
+				--><span class="tip-content"><!--
 					-->Example of a Query that will work correctly.<!--
-				--></span>&nbsp;&nbsp;Show CODE: DELETE FROM<!--
+				--></span>&nbsp;&nbsp;Show CODE:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DELETE FROM<!--
 			--><div id="spoilerContent0" class="spoiler-content">
 				<button id="copiaBTest0" onclick="copiaContenuto('Test0', 'copiaBTest0')"><!--
 				-->Copy
@@ -72,7 +73,7 @@
 				</span>
 				<span class="tip-content"><!--
 				-->Example of a Query that will work correctly.<!--
-			--></span>&nbsp;&nbsp;Show CODE: INSERT INTO<!--
+			--></span>&nbsp;&nbsp;Show CODE:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INSERT INTO<!--
 			--><div id="spoilerContent1" class="spoiler-content">
 				<button id="copiaBTest1" onclick="copiaContenuto('Test1', 'copiaBTest1')"><!--
 				-->Copy
@@ -95,7 +96,7 @@
 				</span>
 				<span class="tip-content"><!--
 				-->Example of a Query that will work correctly.<!--
-			--></span>&nbsp;&nbsp;Show CODE: UPDATE 1<!--
+			--></span>&nbsp;&nbsp;Show CODE:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UPDATE 1<!--
 			--><div id="spoilerContent2" class="spoiler-content">
 				<button id="copiaBTest2" onclick="copiaContenuto('Test2', 'copiaBTest2')"><!--
 				-->Copy
@@ -119,7 +120,7 @@
 				</span>
 				<span class="tip-content"><!--
 				-->Example of a Query that will work (Almost) because the logic of the function does not expect this exception.<!--
-			--></span>&nbsp;&nbsp;Show CODE: DELETE FROM 2<!--
+			--></span>&nbsp;&nbsp;Show CODE:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DELETE FROM 2<!--
 			--><div id="spoilerContent3" class="spoiler-content">
 				<button id="copiaBTest3" onclick="copiaContenuto('Test3', 'copiaBTest3')"><!--
 				-->Copy
@@ -197,6 +198,9 @@
 				<option class="custom-select" value="chiave15">
 					source_type
 				</option>
+				<option class="custom-select" value="chiave15">
+					Reference
+				</option>
 			</select>
 			<span id="Tip2" class="tip-icon">
 				!
@@ -255,10 +259,16 @@
 				<option class="custom-select" value="chiave15">
 					source_type
 				</option>
+				<option class="custom-select" value="chiave15">
+					Reference
+				</option>
 			</select><!--
-		--><button id="semplificaCodice" class="fire-text" onclick="semplificaCodice()" disabled><!--
-			-->Simplify Code<!--
-		--></button><!--
+		--><div id="Counter" class="fire-text">Simplifications Done:
+		<br>
+		&nbsp;<span id="counterValue">0</span></div><!--
+		--><button id="semplificaCodice" class="fire-text" onclick="semplificaCodice(); incrementCounter();" disabled>
+			Simplify Code
+			</button><!--
 		--><button id="cancellaButton"><!--
 			-->Erase<!--
 		--></button><!--
