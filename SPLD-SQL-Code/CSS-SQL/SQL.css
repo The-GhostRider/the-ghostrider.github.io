@@ -713,29 +713,29 @@
 		padding: 10px;
 	}
 
-#Counter {
-    top: 58.8%;
-    left: 43%;
-    height: auto;
-    width: auto;
-    background-color: #010409;
-    display: block;
-    /* flex-direction: row; */
-    /* flex-wrap: nowrap; */
-    position: absolute;
-    /* justify-content: flex-start; */
-    text-align: center;
-    font-size: 19px;
-    padding: 5px;
-    border: 1px solid;
-    border-radius: 10px;
-    border-color: #79c0ff;
-    box-shadow: 3px 3px 5px rgba(107,169,225, 0.9);
-    transition: transform 1s, box-shadow 1s;
-    z-index: 0;
-    align-content: center;
-    /* align-items: flex-start; */
-}
+	#Counter {
+		top: 58.8%;
+		left: 43%;
+		height: auto;
+		width: auto;
+		background-color: #010409;
+		display: block;
+		/* flex-direction: row; */
+		/* flex-wrap: nowrap; */
+		position: absolute;
+		/* justify-content: flex-start; */
+		text-align: center;
+		font-size: 19px;
+		padding: 5px;
+		border: 1px solid;
+		border-radius: 10px;
+		border-color: #79c0ff;
+		box-shadow: 3px 3px 5px rgba(107,169,225, 0.9);
+		transition: transform 1s, box-shadow 1s;
+		z-index: 0;
+		align-content: center;
+		/* align-items: flex-start; */
+	}
 
 	#Logo {
 		margin-top: 0%;
@@ -1375,7 +1375,7 @@
 		margin-bottom: 32%;
 		margin-left: 36.3%;
 		margin-right: 36%;
-		width: 25%;
+		width: 30%;
 		height: auto;
 		color: #79c0ff;
 		font-size: 13px;
