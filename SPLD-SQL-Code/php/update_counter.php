@@ -3,8 +3,10 @@
 	//# update_counter.php #
 	//######################
 
+	header("Access-Control-Allow-Origin: *");
+
 	// Includi il file di configurazione
-	include 'E:/xampp/htdocs/config_db/config.php';
+	include '../../../config_db/config.php';
 
 	$conn = new mysqli($servername, $username, $password, $dbname, $port);
 

@@ -8,13 +8,13 @@
 //###############################################
 
 
-// Includi questo codice solo una volta all'inizio del file Counter.js
 let isCounterIncremented = false;
 let count = 0;
 let isSimplified = false;
+let textContent
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Esegui la richiesta AJAX per ottenere il valore corrente del contatore dal database
+    // Esegue la richiesta AJAX per ottenere il valore corrente del contatore dal database
     fetch("https://lastrevenge.ddns.net/test/SPLD-SQL-Code/php/get_counter.php", {
         method: "GET"
     })
@@ -25,11 +25,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
             throw new Error("Errore nella richiesta AJAX");
         }
     })
-    .then(data => {
-        // Imposta il contatore sulla pagina con il valore ricevuto dal server
-        count = parseInt(data);
-        document.getElementById("counterValue").textContent = count;
-    })
+	.then(data => {
+		// Verifica se il valore restituito è "DB Temporarily Offline"
+		console.log("DB Off", document.getElementById("counterValue"));
+		if (data.trim() === "DB Temporarily Offline") {
+		} else {
+			// Verifica se il valore restituito può essere convertito in un numero
+			let count = parseInt(data);
+			if (!isNaN(count)) {
+				// Imposta il contatore sulla pagina con il valore ricevuto dal server
+				document.getElementById("counterValue").textContent = count;
+			} else {
+				// Mostra un messaggio appropriato al posto del valore "NaN"
+				document.getElementById("counterValue").textContent = "DB Temporarily Offline";
+			}
+		}
+	})
     .catch(error => {
         console.error(error);
     });

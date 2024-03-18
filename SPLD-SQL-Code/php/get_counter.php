@@ -1,35 +1,39 @@
 <?php
-	//###################
-	//# get_counter.php #
-	//###################
+    //###################
+    //# get_counter.php #
+    //###################
 
-	// Includi il file di configurazione
-	include 'E:/xampp/htdocs/config_db/config.php';
+    header("Access-Control-Allow-Origin: *");
 
-	// Crea una connessione
-	$conn = new mysqli($servername, $username, $password, $dbname, $port);
+    // Includi il file di configurazione
+    include '../../../config_db/config.php';
 
-	// Controlla la connessione
-	if ($conn->connect_error) {
-		die("Connessione al database fallita: " . $conn->connect_error);
-	}
+    // Crea una connessione
+    $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
-	// Query per ottenere il valore del contatore
-	$sql = "SELECT Q_Resolved FROM counter";
-	$result = $conn->query($sql);
+    // Controlla la connessione al database
+    if ($conn->connect_error) {
+        // Se la connessione fallisce, restituisci un messaggio di errore
+        echo "DB Temporarily Offline";
+        exit; // Esci dallo script
+    }
 
-	if ($result->num_rows > 0) {
-		// Estrai il risultato
-		$row = $result->fetch_assoc();
-		$count = $row["Q_Resolved"];
-	
-		// Restituisci il conteggio come risposta
-		echo $count;
-	} else {
-		// Se non ci sono risultati, restituisci 0 o un valore di default
-		echo "0";
-	}
+    // Query per ottenere il valore del contatore
+    $sql = "SELECT Q_Resolved FROM counter";
+    $result = $conn->query($sql);
 
-	// Chiudi la connessione al database
-	$conn->close();
+    if ($result && $result->num_rows > 0) {
+        // Estrai il risultato
+        $row = $result->fetch_assoc();
+        $count = $row["Q_Resolved"];
+        
+        // Restituisci il conteggio come risposta
+        echo $count;
+    } else {
+        // Se la query non restituisce risultati o se ci sono errori
+        echo "DB Temporarily Offline";
+    }
+
+    // Chiudi la connessione al database
+    $conn->close();
 ?>
