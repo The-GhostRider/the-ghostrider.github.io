@@ -4,7 +4,7 @@
 		font-size: 12px;
 		size: 431px 767px;
 		margin: 1mm 1mm 1mm 1mm;
-		margin-bottom: 10%;
+		margin-bottom: 128vh;
 		font-family: "Georgia", "Georgia", monospace;
 		background-color: #0d1117;
 		background-image: linear-gradient(rgba(255,123,114, 0.1), rgba(121,192,255, 0.2), rgba(255,123,114, 0.1));
@@ -12,27 +12,35 @@
 	}
 
 	#Counter {
-		top: 0%;
-		left: 0%;
-		height: 110px;
-		width: auto;
-		background-color: #010409;
-		color: #00A46D;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: center;
+		top: 10vh;
+		margin-top: 0vh;
+		left: 19vw;
+		right: 48vw;
+		margin-left: 0vw;
+		margin-right: 48vw;
+		height: auto;
+		width: 230px;
+		display: block;
 		position: relative;
-		justify-content: center;
-		text-align: right;
-		font-size: 50px;
+		scale: 85%;
+		text-align: center;
+		align-content: center;
+		font-size: 19px;
 		padding: 5px;
 		border: 1px solid;
-		border-radius: 10px;
-		border-color: #79c0ff;
+		border-radius: 15px;
+		border-color: #00a46d;
 		box-shadow: 3px 3px 5px rgba(107,169,225, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		z-index: 0;
+	}
+
+	#Counter:hover {
+		border: 1px solid;
+		border-color: #00a46d;
+		background-color: #010409;
+		box-shadow: -1px -2px 10px 2px rgba(43,89,131, 0.9);
+		transition: transform 0.5s, box-shadow 0.5s;
 	}
 
 	#Logo {
@@ -504,23 +512,30 @@
 		transition: transform 1s, box-shadow 1s;
 	}
 
-	#Tip1 {
-		margin-left: 3%;
-		color: #00A46D;ffd700
-		border: 1px solid;
-		border-color: #ccc;
-	}
-
-	#Tip2 {
+	.tip_green {
 		margin-left: 1%;
-		color: #ff0000;79c0ff
+		color: #00A46D;
 		border: 1px solid;
 		border-color: #ccc;
 	}
 
-	#Tip3 {
+	.tip_red {
+		margin-left: 1%;
+		color: #ff0000;
+		border: 1px solid;
+		border-color: #ccc;
+	}
+
+	.tip_yellow {
 		margin-left: 1%;
 		color: #ffd700;
+		border: 1px solid;
+		border-color: #ccc;
+	}
+
+	.tip_purple {
+		margin-left: 1%;
+		color: #6746a3;
 		border: 1px solid;
 		border-color: #ccc;
 	}
@@ -574,21 +589,22 @@
 	}
 
 	.spoiler-content {
-		top: 50%;
-		left: 50%;
-		margin-top: 10px;
-		width: 380px;
-		max-width: 380px;
+		right: 28vh;
+		margin-top: 55vh;
+		margin-left: 20vw;
+		margin-right: 0vw;
+		width: 658px;
+		max-width: 658px;
 		display: none;
 		position: absolute;
 		padding: 3px;
+		scale: 60%;
 		border: 1px solid;
 		border-radius: 10px;
 		border-color: #79c0ff;
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		transform: translate(-50%, -50%);
-		animation: fadeIn 0.9s;
 		z-index: 10;
 	}
 
@@ -608,10 +624,6 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1px;
-	}
-
-	.spoilers {
-		display: flex;
 	}
 
 	@keyframes fadeIn {
@@ -649,14 +661,19 @@
 	}
 
 	#copyright {
+		top: 221vh;
+		left: -3vw;
+		margin-top: 0vh;
+		margin-bottom: 0vh;
+		margin-left: 0vw;
+		margin-right: 0vw;
+		width: 420px;
 		height: auto;
-		width: 380px;
-		margin-top: 220%;
-		margin-left: -1%;
-		position: relative;
 		color: #79c0ff;
 		font-size: 13px;
 		text-align: center;
+		position: absolute;
+		scale: 87%;
 		padding: 10px;
 		border: 1px solid;
 		border-radius: 15px;
@@ -669,8 +686,9 @@
 	#copyright:hover {
 		border: 1px solid;
 		border-color: #00a46d;
-		box-shadow: -1px -2px 10px 2px rgba(204,204,204, 0.9);
-		transition: transform 1s, box-shadow 1s;
+		background-color: #010409;
+		box-shadow: -1px -2px 10px 2px rgba(43,89,131, 0.9);
+		transition: transform 0.5s, box-shadow 0.5s;
 	}
 
 	.fire-text {
@@ -703,10 +721,12 @@
 @media (min-width: 1080px) {
 	/* Aggiunge stili per PC, tablet, ecc. */
 	body {
+		position: relative;
+		top: 0%;
 		font-size: 12px;
 		size: 1920px 1080px;
 		margin: 1mm 1mm 1mm 1mm;
-		margin-bottom: 35%;
+		margin-bottom: 12%;
 		font-family: "Georgia", "Georgia", monospace;
 		background-color: #0d1117;
 		background-image: linear-gradient(rgba(255,123,114, 0.1), rgba(121,192,255, 0.2), rgba(255,123,114, 0.1));
@@ -714,27 +734,34 @@
 	}
 
 	#Counter {
-		top: 58.8%;
-		left: 43%;
+		top: 16vh;
+		margin-top: 0vh;
+		left: 41.9vw;
+		right: 48vw;
+		margin-left: 0vw;
+		margin-right: 48vw;
 		height: auto;
-		width: auto;
-		background-color: #010409;
+		width: 230px;
 		display: block;
-		/* flex-direction: row; */
-		/* flex-wrap: nowrap; */
-		position: absolute;
-		/* justify-content: flex-start; */
+		position: relative;
 		text-align: center;
+		align-content: center;
 		font-size: 19px;
 		padding: 5px;
 		border: 1px solid;
-		border-radius: 10px;
-		border-color: #79c0ff;
+		border-radius: 15px;
+		border-color: #00a46d;
 		box-shadow: 3px 3px 5px rgba(107,169,225, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		z-index: 0;
-		align-content: center;
-		/* align-items: flex-start; */
+	}
+
+	#Counter:hover {
+		border: 1px solid;
+		border-color: #00a46d;
+		background-color: #010409;
+		box-shadow: -1px -2px 10px 2px rgba(43,89,131, 0.9);
+		transition: transform 0.5s, box-shadow 0.5s;
 	}
 
 	#Logo {
@@ -800,9 +827,16 @@
 	}
 
 	h1 {
-		margin-top: 0%;
+		margin-top: 0vh;
+		margin-bottom: 0vh;
+		margin-left: 0vw;
+		margin-right: 0vw;
+		top: 0vh;
+		bottom: 0vh;
+		left: 0vw;
+		right: 0vw;
 		height: 110px;
-		width: auto;
+		width: 97vw;
 		background-color: #010409;
 		color: #00A46D;
 		display: flex;
@@ -852,11 +886,14 @@
 	}
 
 	#PK {
-		margin-top: 14%;
+		position: relative;
+		top: 22vh;
+		margin-top: 13vh;
 	}
 
 	#cfd {
-		margin-top: -1%;
+		position: absolute;
+		top: 17vh;
 		z-index: 0;
 	}
 
@@ -960,18 +997,19 @@
 	}
 
 	#elaborazione {
-		margin-top: 0%;
+		position: relative;
+		top: 17vh;
 	}
 
 	#codiceOriginale {
-		margin-top: 1%;
+		top: 0%;
 		height: auto;
-		width: 97.5%;
+		width: 97vw;
 		min-height: 200px;
 		background-color: #010409;
-	/*	color: #c9d1d9; */
+		/* color: #c9d1d9; */
 		display: flex;
-		position: absolute;
+		position: relative;
 		justify-content: center;
 		text-align: center;
 		font-size: 12px;
@@ -992,13 +1030,13 @@
 	}
 
 	#ssc {
-		margin-top: 13%;
+		top: 0vh;
 		height: auto;
-		width: 97.5%;
+		width: 97vw;
 		background-color: #010409;
 		color: #00A46D;
 		display: flex;
-		position: absolute;
+		position: relative;
 		justify-content: center;
 		text-align: center;
 		font-size: 30px;
@@ -1027,16 +1065,16 @@
 	}
 
 	#codiceSemplificato {
-		margin-top: 17%;
+		top: 0vh;
 		height: auto;
-		width: 99%;
-		max-width: 97.4%;
-		min-height: 200px;
+		width: 97vw;
+		max-width: 97vw;
+		min-height: 250px;
 		background-color: #010409;
 		display: inline-block;
 		text-align: center;
 		font-size: 18px;
-		position: absolute;
+		position: relative;
 		padding: 4px;
 		border: 1px solid;
 		border-radius: 10px;
@@ -1118,8 +1156,8 @@
 	}
 
 	#copiaButton {
-		margin-top: 15.4%;
-		position: absolute;
+		top: 0vh;
+		position: relative;
 	}
 
 	#copiaBTest0 {
@@ -1151,7 +1189,10 @@
 	}
 
 	#cancellaButton {
-		margin-left: 63%;
+		left: 89vw;
+		right: 7vw;
+		margin-left: 0vw;
+		margin-right: 7vw;
 		position: absolute;
 	}
 
@@ -1175,18 +1216,18 @@
 	}
 
 	.tip-content {
-		top: 60%;
-		left: 83%;
-		width: auto;
+		top: 569%;
+		margin-top: -20.1%;
+		left: 74vw;
+		width: 250px;
 		height: auto;
-		max-width: 400px;
 		background-color: #010409;
-		color: #79c0ff;
+		color: #00a46d;
 		display: none;
 		position: absolute;
 		font-size: 11px;
-		line-height: 19px;
-		padding: 10px;
+		line-height: 14px;
+		padding: 3px;
 		border: 1px solid;
 		border-radius: 10px;
 		border-color: #ccc;
@@ -1217,23 +1258,30 @@
 		transition: transform 1s, box-shadow 1s;
 	}
 
-	#Tip1 {
+	.tip_green {
 		margin-left: 1%;
 		color: #00A46D;
 		border: 1px solid;
 		border-color: #ccc;
 	}
 
-	#Tip2 {
+	.tip_red {
 		margin-left: 1%;
 		color: #ff0000;
 		border: 1px solid;
 		border-color: #ccc;
 	}
 
-	#Tip3 {
+	.tip_yellow {
 		margin-left: 1%;
 		color: #ffd700;
+		border: 1px solid;
+		border-color: #ccc;
+	}
+
+	.tip_purple {
+		margin-left: 1%;
+		color: #6746a3;
 		border: 1px solid;
 		border-color: #ccc;
 	}
@@ -1271,15 +1319,14 @@
 	}
 
 	.spoiler {
+		height: 50px;
 		margin-top: 15px;
-		width: 38%;
+		width: 200px;
+		max-width: 200px;
 		background-color: #010409;
 		color: #79c0ff;
 		display: block;
-		/* flex-direction: row; */
-		/* align-content: unset; */
-		/* flex-wrap: nowrap; */
-		/* justify-content: center; */
+		align-content: center;
 		text-align: justify;
 		font-size: 16px;
 		font-weight: bold;
@@ -1290,21 +1337,20 @@
 		box-shadow: 6px 3px 6px rgba(255,123,114, 0.9);
 		transition: transform 1s, box-shadow 1s;
 		cursor: pointer;
-		/* gap: 15px; */
 		z-index: 0;
-		/* align-items: center; */
 	}
 
 	.spoiler-content {
-		top: 40.5%;
-		left: 49%;
-		margin-top: 10px;
+		right: 28vh;
+		margin-top: 26vh;
+		margin-left: 46.7vw;
+		margin-right: 0vw;
 		width: 658px;
 		max-width: 658px;
 		display: none;
 		position: absolute;
 		padding: 3px;
-		scale: 95%;
+		scale: 90%;
 		border: 1px solid;
 		border-radius: 10px;
 		border-color: #79c0ff;
@@ -1322,18 +1368,17 @@
 	}
 
 	.spoilers-container {
-		margin-left: 0%;
-		flex-direction: column;
+		position: relative;
+		top: 1vh;
+		margin-left: 0vw;
+		margin-right: 2.2vw;
+		left: 0vw;
 		align-items: baseline;
 		justify-items: center;
 		justify-content: space-between;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1px;
-	}
-
-	.spoilers {
-		display: flex;
 	}
 
 	@keyframes fadeIn {
@@ -1371,16 +1416,18 @@
 	}
 
 	#copyright {
-		margin-top: 32%;
-		margin-bottom: 32%;
-		margin-left: 36.3%;
-		margin-right: 36%;
-		width: 30%;
+		top: 20vh;
+		left: 36.2vw;
+		margin-top: 0vh;
+		margin-bottom: 0vh;
+		margin-left: 0vw;
+		margin-right: 0vw;
+		width: 450px;
 		height: auto;
 		color: #79c0ff;
 		font-size: 13px;
 		text-align: center;
-		position: absolute;
+		position: relative;
 		padding: 10px;
 		border: 1px solid;
 		border-radius: 15px;
@@ -1393,8 +1440,9 @@
 	#copyright:hover {
 		border: 1px solid;
 		border-color: #00a46d;
-		box-shadow: -1px -2px 10px 2px rgba(204,204,204, 0.9);
-		transition: transform 1s, box-shadow 1s;
+		background-color: #010409;
+		box-shadow: -1px -2px 10px 2px rgba(43,89,131, 0.9);
+		transition: transform 0.5s, box-shadow 0.5s;
 	}
 
 	.fire-text {

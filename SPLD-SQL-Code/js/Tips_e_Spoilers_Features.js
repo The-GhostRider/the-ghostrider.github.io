@@ -3,33 +3,36 @@
 //###############################
 
 
-//##########################
-//# Gestore Posizione Tips #
-//##########################
+//#####################################
+//# Gestore Posizione Tips e Spoilers #
+//#####################################
 
 window.addEventListener('load', function() {
-console.log("La funzione load è stata chiamata.");
-	const tipIcon = document.querySelectorAll(`#Tip${index}`);
-	const iconContentData = [
-	{ iconId: `#Tip${index}` }
-	];
-	
-	iconContentData.forEach(data => {
-	const icon = document.getElementById(data.iconId);
-	const content = document.querySelector(data.contentClass);
-	
-	if (icon && content) {
-		const tipIconRect = icon.getBoundingClientRect();
-		const tipTop = tipIconRect.top + tipIconRect.height * 0.31;
-		const tipLeft = tipIconRect.left + tipIconRect.width * 0.39;
-		
-		content.style.top = tipTop + 'px';
-		content.style.left = tipLeft + 'px';
-		content.style.display = 'none';
-	}
+    console.log("La funzione load è stata chiamata.");
+    const spoilerContents = document.querySelectorAll('.spoiler-content');
+    const tipContents = document.querySelectorAll('.tip-content');
+    
+    function positionContent(contents, iconIdPrefix, topMultiplier, leftMultiplier) {
+        contents.forEach((content, index) => {
+            const iconId = `${iconIdPrefix}${index}`;
+            const icon = document.getElementById(iconId);
+            
+            if (icon && content) {
+                const iconRect = icon.getBoundingClientRect();
+                const top = iconRect.top + iconRect.height * topMultiplier;
+                const left = iconRect.left + iconRect.width * leftMultiplier;
+                
+                content.style.top = top + 'px';
+                content.style.left = left + 'px';
+                content.style.display = 'none';
+            }
+        });
+    }
+    
+    positionContent(tipContents, '#Tip', 1, 1);
+    positionContent(spoilerContents, 'copiaBTest', 0.31, 0.39);
 });
 
-});
 
 
 //###############################

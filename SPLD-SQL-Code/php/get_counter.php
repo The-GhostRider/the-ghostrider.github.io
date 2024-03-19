@@ -11,12 +11,9 @@
     // Crea una connessione
     $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
-    // Controlla la connessione al database
-    if ($conn->connect_error) {
-        // Se la connessione fallisce, restituisci un messaggio di errore
-        echo "DB Temporarily Offline";
-        exit; // Esci dallo script
-    }
+	if ($conn->connect_error) {
+		die("Connessione al database fallita: " . $conn->connect_error);
+	}
 
     // Query per ottenere il valore del contatore
     $sql = "SELECT Q_Resolved FROM counter";
