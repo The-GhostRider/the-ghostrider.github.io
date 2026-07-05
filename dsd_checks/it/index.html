@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diario Glicemico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="lang-switch" href="../en/index.html">EN</a>
+  <p class="eyebrow">Registro personale &middot; aggiornato da foglio Excel</p>
+  	<h1 style="font-weight:bold;">
+		<span style="color:#228B22;">Diario</span>
+		<span style="color:#2A2A26;">Zuccheri nel</span>
+		<span style="color:#8B0000;">Sangue</span>
+	</h1>
+  <p class="subtitle">Zucchero Nel Sangue, chetoni, dosi di insulina e pasti, giorno per giorno.<br>I dati arrivano dal file <code>dati.xlsx</code></p>
+  <div class="toolbar">
+    <button class="btn" id="uploadBtn">Carica file Excel</button>
+    <input type="file" id="fileInput" accept=".xlsx,.xls">
+    <span class="status-line" id="statusLine">Ricerca di dati.xlsx in corso&hellip;</span>
+  </div>
+</header>
+
+<nav class="week-strip" id="weekStrip"></nav>
+
+<main id="main">
+  <div class="empty-state" id="emptyState">
+    <strong class="empty-title">Nessun dato caricato</strong>
+    <span class="empty-text">Carica il tuo file Excel per vedere il diario, oppure metti <code>dati.xlsx</code> nella stessa cartella di questa pagina.</span>
+  </div>
+</main>
+
+<nav class="pagination" id="pagination"></nav>
+
+<footer>Diario Glicemico &mdash; i valori sono quelli inseriti manualmente nel foglio, nessun calcolo medico viene effettuato da questa pagina.</footer>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg" src="" alt="Foto pasto ingrandita"></div>
+
+<script>window.LANG = 'it';</script>
+<script src="../js/app.js"></script>
+</body>
+</html>

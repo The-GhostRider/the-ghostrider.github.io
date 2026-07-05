@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Sugar Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="lang-switch" href="../it/index.html">IT</a>
+  <p class="eyebrow">Personal log &middot; updated from Excel file</p>
+	<h1 style="font-weight:bold;">
+		<span style="color:#8B0000;">Blood</span>
+		<span style="color:#2A2A26;">Sugar</span>
+		<span style="color:#228B22;">Log</span>
+	</h1>
+  <p class="subtitle">Blood Sugar, ketones, insulin doses and meals, day by day.<br>Data comes from <code>dati.xlsx</code></p>
+  <div class="toolbar">
+    <button class="btn" id="uploadBtn">Upload Excel file</button>
+    <input type="file" id="fileInput" accept=".xlsx,.xls">
+    <span class="status-line" id="statusLine">Looking for dati.xlsx&hellip;</span>
+  </div>
+</header>
+
+<nav class="week-strip" id="weekStrip"></nav>
+
+<main id="main">
+  <div class="empty-state" id="emptyState">
+    <strong class="empty-title">No data loaded</strong>
+    <span class="empty-text">Upload your Excel file to see the log, or place <code>dati.xlsx</code> in the same folder as this page.</span>
+  </div>
+</main>
+
+<nav class="pagination" id="pagination"></nav>
+
+<footer>Blood Sugar Log &mdash; values are those entered manually in the sheet, no medical calculation is performed by this page.</footer>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg" src="" alt="Enlarged meal photo"></div>
+
+<script>window.LANG = 'en';</script>
+<script src="../js/app.js"></script>
+</body>
+</html>
