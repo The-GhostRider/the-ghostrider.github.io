@@ -122,9 +122,9 @@ function bloodsugarClass(v){
   if(v === null || v === undefined || v === "") return null;
   const n = Number(v);
   if(isNaN(n)) return null;
-  if(n < 0.4) return "low";
+  if(n < 3.9) return "low";
   if(n <= 10) return "normal";
-  if(n <= 12) return "watch";
+  if(n <= 13.3) return "watch";
   return "alert";
 }
 
